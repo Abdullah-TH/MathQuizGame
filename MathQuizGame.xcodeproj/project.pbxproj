@@ -9,11 +9,8 @@
 /* Begin PBXBuildFile section */
 		6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA647253C1FFA00C2027D /* AppDelegate.swift */; };
 		6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */; };
-		6A6DA64C253C1FFA00C2027D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA64B253C1FFA00C2027D /* ViewController.swift */; };
-		6A6DA64F253C1FFA00C2027D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA64D253C1FFA00C2027D /* Main.storyboard */; };
 		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
 		6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */; };
-		6A6DA65F253C1FFA00C2027D /* MathQuizGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA65E253C1FFA00C2027D /* MathQuizGameTests.swift */; };
 		6A6DA66A253C1FFA00C2027D /* MathQuizGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,13 +35,10 @@
 		6A6DA644253C1FF900C2027D /* MathQuizGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathQuizGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DA647253C1FFA00C2027D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A6DA64B253C1FFA00C2027D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6A6DA64E253C1FFA00C2027D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A6DA650253C1FFA00C2027D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A6DA653253C1FFA00C2027D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A6DA655253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A6DA65A253C1FFA00C2027D /* MathQuizGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A6DA65E253C1FFA00C2027D /* MathQuizGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizGameTests.swift; sourceTree = "<group>"; };
 		6A6DA660253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A6DA665253C1FFA00C2027D /* MathQuizGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizGameUITests.swift; sourceTree = "<group>"; };
@@ -101,8 +95,6 @@
 			children = (
 				6A6DA647253C1FFA00C2027D /* AppDelegate.swift */,
 				6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */,
-				6A6DA64B253C1FFA00C2027D /* ViewController.swift */,
-				6A6DA64D253C1FFA00C2027D /* Main.storyboard */,
 				6A6DA650253C1FFA00C2027D /* Assets.xcassets */,
 				6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */,
 				6A6DA655253C1FFA00C2027D /* Info.plist */,
@@ -113,7 +105,6 @@
 		6A6DA65D253C1FFA00C2027D /* MathQuizGameTests */ = {
 			isa = PBXGroup;
 			children = (
-				6A6DA65E253C1FFA00C2027D /* MathQuizGameTests.swift */,
 				6A6DA660253C1FFA00C2027D /* Info.plist */,
 			);
 			path = MathQuizGameTests;
@@ -233,7 +224,6 @@
 			files = (
 				6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */,
 				6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */,
-				6A6DA64F253C1FFA00C2027D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6DA64C253C1FFA00C2027D /* ViewController.swift in Sources */,
 				6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */,
 				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
 			);
@@ -268,7 +257,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6DA65F253C1FFA00C2027D /* MathQuizGameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +284,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6A6DA64D253C1FFA00C2027D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6A6DA64E253C1FFA00C2027D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
