@@ -12,6 +12,9 @@
 		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
 		6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */; };
 		6A6DA66A253C1FFA00C2027D /* MathQuizGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */; };
+		6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA693253C234A00C2027D /* QuestionViewController.swift */; };
+		6A6DA696253C234A00C2027D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA694253C234A00C2027D /* QuestionViewController.xib */; };
+		6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		6A6DA665253C1FFA00C2027D /* MathQuizGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizGameUITests.swift; sourceTree = "<group>"; };
 		6A6DA66B253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A6DA693253C234A00C2027D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		6A6DA694253C234A00C2027D /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
+		6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 				6A6DA650253C1FFA00C2027D /* Assets.xcassets */,
 				6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */,
 				6A6DA655253C1FFA00C2027D /* Info.plist */,
+				6A6DA693253C234A00C2027D /* QuestionViewController.swift */,
+				6A6DA694253C234A00C2027D /* QuestionViewController.xib */,
 			);
 			path = MathQuizGame;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				6A6DA660253C1FFA00C2027D /* Info.plist */,
+				6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */,
 			);
 			path = MathQuizGameTests;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 					};
 					6A6DA659253C1FFA00C2027D = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1200;
 						TestTargetID = 6A6DA643253C1FF900C2027D;
 					};
 					6A6DA664253C1FFA00C2027D = {
@@ -224,6 +234,7 @@
 			files = (
 				6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */,
 				6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */,
+				6A6DA696253C234A00C2027D /* QuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +261,7 @@
 			files = (
 				6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */,
 				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
+				6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +467,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9893MU9BC;
 				INFOPLIST_FILE = MathQuizGameTests/Info.plist;
@@ -465,6 +479,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGameTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathQuizGame.app/MathQuizGame";
@@ -476,6 +491,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9893MU9BC;
 				INFOPLIST_FILE = MathQuizGameTests/Info.plist;
