@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA647253C1FFA00C2027D /* AppDelegate.swift */; };
+		6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */; };
+		6A6DA64C253C1FFA00C2027D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA64B253C1FFA00C2027D /* ViewController.swift */; };
+		6A6DA64F253C1FFA00C2027D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA64D253C1FFA00C2027D /* Main.storyboard */; };
+		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
+		6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */; };
+		6A6DA65F253C1FFA00C2027D /* MathQuizGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA65E253C1FFA00C2027D /* MathQuizGameTests.swift */; };
+		6A6DA66A253C1FFA00C2027D /* MathQuizGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6A6DA65B253C1FFA00C2027D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A6DA63C253C1FF900C2027D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A6DA643253C1FF900C2027D;
+			remoteInfo = MathQuizGame;
+		};
+		6A6DA666253C1FFA00C2027D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A6DA63C253C1FF900C2027D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A6DA643253C1FF900C2027D;
+			remoteInfo = MathQuizGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6A6DA644253C1FF900C2027D /* MathQuizGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathQuizGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A6DA647253C1FFA00C2027D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6A6DA64B253C1FFA00C2027D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A6DA64E253C1FFA00C2027D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A6DA650253C1FFA00C2027D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A6DA653253C1FFA00C2027D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A6DA655253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A6DA65A253C1FFA00C2027D /* MathQuizGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A6DA65E253C1FFA00C2027D /* MathQuizGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizGameTests.swift; sourceTree = "<group>"; };
+		6A6DA660253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A6DA665253C1FFA00C2027D /* MathQuizGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizGameUITests.swift; sourceTree = "<group>"; };
+		6A6DA66B253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6A6DA641253C1FF900C2027D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6DA657253C1FFA00C2027D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6DA662253C1FFA00C2027D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A6DA63B253C1FF900C2027D = {
+			isa = PBXGroup;
+			children = (
+				6A6DA646253C1FFA00C2027D /* MathQuizGame */,
+				6A6DA65D253C1FFA00C2027D /* MathQuizGameTests */,
+				6A6DA668253C1FFA00C2027D /* MathQuizGameUITests */,
+				6A6DA645253C1FF900C2027D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6A6DA645253C1FF900C2027D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6A6DA644253C1FF900C2027D /* MathQuizGame.app */,
+				6A6DA65A253C1FFA00C2027D /* MathQuizGameTests.xctest */,
+				6A6DA665253C1FFA00C2027D /* MathQuizGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6A6DA646253C1FFA00C2027D /* MathQuizGame */ = {
+			isa = PBXGroup;
+			children = (
+				6A6DA647253C1FFA00C2027D /* AppDelegate.swift */,
+				6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */,
+				6A6DA64B253C1FFA00C2027D /* ViewController.swift */,
+				6A6DA64D253C1FFA00C2027D /* Main.storyboard */,
+				6A6DA650253C1FFA00C2027D /* Assets.xcassets */,
+				6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */,
+				6A6DA655253C1FFA00C2027D /* Info.plist */,
+			);
+			path = MathQuizGame;
+			sourceTree = "<group>";
+		};
+		6A6DA65D253C1FFA00C2027D /* MathQuizGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A6DA65E253C1FFA00C2027D /* MathQuizGameTests.swift */,
+				6A6DA660253C1FFA00C2027D /* Info.plist */,
+			);
+			path = MathQuizGameTests;
+			sourceTree = "<group>";
+		};
+		6A6DA668253C1FFA00C2027D /* MathQuizGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */,
+				6A6DA66B253C1FFA00C2027D /* Info.plist */,
+			);
+			path = MathQuizGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6A6DA643253C1FF900C2027D /* MathQuizGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A6DA66E253C1FFA00C2027D /* Build configuration list for PBXNativeTarget "MathQuizGame" */;
+			buildPhases = (
+				6A6DA640253C1FF900C2027D /* Sources */,
+				6A6DA641253C1FF900C2027D /* Frameworks */,
+				6A6DA642253C1FF900C2027D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathQuizGame;
+			productName = MathQuizGame;
+			productReference = 6A6DA644253C1FF900C2027D /* MathQuizGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6A6DA659253C1FFA00C2027D /* MathQuizGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A6DA671253C1FFA00C2027D /* Build configuration list for PBXNativeTarget "MathQuizGameTests" */;
+			buildPhases = (
+				6A6DA656253C1FFA00C2027D /* Sources */,
+				6A6DA657253C1FFA00C2027D /* Frameworks */,
+				6A6DA658253C1FFA00C2027D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A6DA65C253C1FFA00C2027D /* PBXTargetDependency */,
+			);
+			name = MathQuizGameTests;
+			productName = MathQuizGameTests;
+			productReference = 6A6DA65A253C1FFA00C2027D /* MathQuizGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6A6DA664253C1FFA00C2027D /* MathQuizGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A6DA674253C1FFA00C2027D /* Build configuration list for PBXNativeTarget "MathQuizGameUITests" */;
+			buildPhases = (
+				6A6DA661253C1FFA00C2027D /* Sources */,
+				6A6DA662253C1FFA00C2027D /* Frameworks */,
+				6A6DA663253C1FFA00C2027D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A6DA667253C1FFA00C2027D /* PBXTargetDependency */,
+			);
+			name = MathQuizGameUITests;
+			productName = MathQuizGameUITests;
+			productReference = 6A6DA665253C1FFA00C2027D /* MathQuizGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6A6DA63C253C1FF900C2027D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					6A6DA643253C1FF900C2027D = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					6A6DA659253C1FFA00C2027D = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 6A6DA643253C1FF900C2027D;
+					};
+					6A6DA664253C1FFA00C2027D = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 6A6DA643253C1FF900C2027D;
+					};
+				};
+			};
+			buildConfigurationList = 6A6DA63F253C1FF900C2027D /* Build configuration list for PBXProject "MathQuizGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6A6DA63B253C1FF900C2027D;
+			productRefGroup = 6A6DA645253C1FF900C2027D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6A6DA643253C1FF900C2027D /* MathQuizGame */,
+				6A6DA659253C1FFA00C2027D /* MathQuizGameTests */,
+				6A6DA664253C1FFA00C2027D /* MathQuizGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A6DA642253C1FF900C2027D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */,
+				6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */,
+				6A6DA64F253C1FFA00C2027D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6DA658253C1FFA00C2027D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6DA663253C1FFA00C2027D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A6DA640253C1FF900C2027D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6DA64C253C1FFA00C2027D /* ViewController.swift in Sources */,
+				6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */,
+				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6DA656253C1FFA00C2027D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6DA65F253C1FFA00C2027D /* MathQuizGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A6DA661253C1FFA00C2027D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6DA66A253C1FFA00C2027D /* MathQuizGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A6DA65C253C1FFA00C2027D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A6DA643253C1FF900C2027D /* MathQuizGame */;
+			targetProxy = 6A6DA65B253C1FFA00C2027D /* PBXContainerItemProxy */;
+		};
+		6A6DA667253C1FFA00C2027D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A6DA643253C1FF900C2027D /* MathQuizGame */;
+			targetProxy = 6A6DA666253C1FFA00C2027D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6A6DA64D253C1FFA00C2027D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A6DA64E253C1FFA00C2027D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6A6DA653253C1FFA00C2027D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6A6DA66C253C1FFA00C2027D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6A6DA66D253C1FFA00C2027D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A6DA66F253C1FFA00C2027D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9893MU9BC;
+				INFOPLIST_FILE = MathQuizGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6A6DA670253C1FFA00C2027D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9893MU9BC;
+				INFOPLIST_FILE = MathQuizGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6A6DA672253C1FFA00C2027D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9893MU9BC;
+				INFOPLIST_FILE = MathQuizGameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathQuizGame.app/MathQuizGame";
+			};
+			name = Debug;
+		};
+		6A6DA673253C1FFA00C2027D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9893MU9BC;
+				INFOPLIST_FILE = MathQuizGameTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathQuizGame.app/MathQuizGame";
+			};
+			name = Release;
+		};
+		6A6DA675253C1FFA00C2027D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9893MU9BC;
+				INFOPLIST_FILE = MathQuizGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MathQuizGame;
+			};
+			name = Debug;
+		};
+		6A6DA676253C1FFA00C2027D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9893MU9BC;
+				INFOPLIST_FILE = MathQuizGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AbdullahAlthobetey.MathQuizGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MathQuizGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6A6DA63F253C1FF900C2027D /* Build configuration list for PBXProject "MathQuizGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6DA66C253C1FFA00C2027D /* Debug */,
+				6A6DA66D253C1FFA00C2027D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A6DA66E253C1FFA00C2027D /* Build configuration list for PBXNativeTarget "MathQuizGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6DA66F253C1FFA00C2027D /* Debug */,
+				6A6DA670253C1FFA00C2027D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A6DA671253C1FFA00C2027D /* Build configuration list for PBXNativeTarget "MathQuizGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6DA672253C1FFA00C2027D /* Debug */,
+				6A6DA673253C1FFA00C2027D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A6DA674253C1FFA00C2027D /* Build configuration list for PBXNativeTarget "MathQuizGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6DA675253C1FFA00C2027D /* Debug */,
+				6A6DA676253C1FFA00C2027D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6A6DA63C253C1FF900C2027D /* Project object */;
+}
