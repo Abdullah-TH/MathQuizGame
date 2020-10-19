@@ -12,6 +12,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    private let reuseIdentifier = "OptionCell"
+    
     let question: String
     let options: [String]
     
@@ -34,6 +36,7 @@ class QuestionViewController: UIViewController {
 }
 
 extension QuestionViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
@@ -44,5 +47,10 @@ extension QuestionViewController: UITableViewDataSource {
         return cell
     }
     
-    
+    private func dequeueCell(for tableView: UITableView) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) {
+            return cell
+        }
+        return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+    }
 }
