@@ -7,15 +7,22 @@
 
 import UIKit
 
+struct PresentableAnswer {
+    let isCorrect: Bool
+}
+
+class CorrectAnswerCell: UITableViewCell {}
+class WrongAnswerCell: UITableViewCell {}
+
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     private let summary: String
-    private let answers: [String]
+    private let answers: [PresentableAnswer]
     
-    init(summary: String, answers: [String]) {
+    init(summary: String, answers: [PresentableAnswer]) {
         self.summary = summary
         self.answers = answers
         super.init(nibName: nil, bundle: nil)
@@ -40,6 +47,7 @@ extension ResultsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let answer = answers[indexPath.row]
+        return answer.isCorrect ? CorrectAnswerCell() : WrongAnswerCell()
     }
 }
