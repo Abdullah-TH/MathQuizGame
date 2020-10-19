@@ -11,37 +11,53 @@ import XCTest
 class QuestionViewControllerTests: XCTestCase {
 
     func test_viewDidLoad_renderQuestionHeaderText() {
-        let sut = QuestionViewController(question: "Q1", options: [])
-        
-        _ = sut.view
-        
+        let sut = makeSUT(question: "Q1")
         XCTAssertEqual(sut.headerLabel.text, "Q1")
     }
     
-    func test_viewDidLoad_withNoOptions_renderZeroOptions() {
-        let sut = QuestionViewController(question: "Q1", options: [])
-        
-        _ = sut.view
-        
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
+    func test_viewDidLoad_createOptionCells() {
+        XCTAssertEqual(
+            makeSUT(options: []).tableView.numberOfRows(inSection: 0),
+            0
+        )
+        XCTAssertEqual(
+            makeSUT(options: ["A1"]).tableView.numberOfRows(inSection: 0),
+            1
+        )
+        XCTAssertEqual(
+            makeSUT(options: ["A1", "A2"]).tableView.numberOfRows(inSection: 0),
+            2
+        )
     }
     
-    func test_viewDidLoad_withOneOption_createsOneOptionCell() {
-        let sut = QuestionViewController(question: "Q1", options: ["A1"])
+    func test_viewDidLoad_rendersOptionTexts() {
+        let sut = makeSUT(question: "Q1", options: ["A1", "A2", "A3"])
         
-        _ = sut.view
-        
-        XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(sut.tableView.title(for: 0), "A1")
+        XCTAssertEqual(sut.tableView.title(for: 1), "A2")
+        XCTAssertEqual(sut.tableView.title(for: 2), "A3")
     }
     
-    func test_viewDidLoad_withOneOption_rendersOneOptionText() {
-        let sut = QuestionViewController(question: "Q1", options: ["A1"])
-        
-        _ = sut.view
-        let indexPath = IndexPath(row: 0, section: 0)
-        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: indexPath)
-        
-        XCTAssertEqual(cell?.textLabel?.text, "A1")
+    // MARK: - Helpers
+    
+    private func makeSUT(question: String = "", options: [String] = []) -> QuestionViewController {
+        let sut = QuestionViewController(question: question, options: options)
+        _ = sut.view // to load the view and trigger viewDidLoad method
+        return sut
     }
 
+}
+
+private extension UITableView {
+    
+    func cell(for row: Int) -> UITableViewCell? {
+        self.dataSource?.tableView(
+            self,
+            cellForRowAt: IndexPath(row: row, section: 0)
+        )
+    }
+    
+    func title(for row: Int) -> String? {
+        cell(for: row)?.textLabel?.text
+    }
 }
