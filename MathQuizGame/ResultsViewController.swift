@@ -10,11 +10,14 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     private let summary: String
+    private let answers: [String]
     
-    init(summary: String) {
+    init(summary: String, answers: [String]) {
         self.summary = summary
+        self.answers = answers
         super.init(nibName: nil, bundle: nil)
     }
     
