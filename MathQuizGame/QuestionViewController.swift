@@ -14,12 +14,18 @@ class QuestionViewController: UIViewController {
     
     private let reuseIdentifier = "OptionCell"
     
-    let question: String
-    let options: [String]
+    private let question: String
+    private let options: [String]
+    private var selection: (String) -> Void
     
-    init(question: String, options: [String]) {
+    init(
+        question: String,
+        options: [String],
+        selection: @escaping (String) -> Void
+    ) {
         self.question = question
         self.options = options
+        self.selection = selection
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,7 +35,8 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self 
+        tableView.dataSource = self
+        tableView.delegate = self
         headerLabel.text = question
     }
 
@@ -53,4 +60,12 @@ extension QuestionViewController: UITableViewDataSource {
         }
         return UITableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
     }
+}
+
+extension QuestionViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selection(options[indexPath.row])
+    }
+    
 }
