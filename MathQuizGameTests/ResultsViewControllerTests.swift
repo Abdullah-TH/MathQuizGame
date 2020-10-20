@@ -21,28 +21,14 @@ class ResultsViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSUT(answers: [makeDummyAnswer(), makeDummyAnswer()]).tableView.numberOfRows(inSection: 0), 2)
     }
     
-    func test_viewDidLoad_withCorrectAnswer_renderCorrectAnswerCell() {
-        let sut = makeSUT(answers: [makeAnswer(isCorrect: true)])
+    func test_viewDidLoad_withCorrectAnswer_configureCorrectAnswerCell() {
+        let sut = makeSUT(answers: [makeAnswer(question: "Q1",answer: "A1", isCorrect: true)])
         
         let cell = sut.tableView.cell(for: 0) as? CorrectAnswerCell
 
         XCTAssertNotNil(cell)
-    }
-    
-    func test_viewDidLoad_withCorrectAnswerCell_renderQuestionText() {
-        let sut = makeSUT(answers: [makeAnswer(question: "Q1", isCorrect: true)])
-        
-        let cell = sut.tableView.cell(for: 0) as! CorrectAnswerCell
-
-        XCTAssertEqual(cell.questionLabel.text, "Q1")
-    }
-    
-    func test_viewDidLoad_withCorrectAnswerCell_renderAnswerText() {
-        let sut = makeSUT(answers: [makeAnswer(answer: "A1", isCorrect: true)])
-        
-        let cell = sut.tableView.cell(for: 0) as! CorrectAnswerCell
-
-        XCTAssertEqual(cell.answerLabel.text, "A1")
+        XCTAssertEqual(cell?.questionLabel.text, "Q1")
+        XCTAssertEqual(cell?.answerLabel.text, "A1")
     }
     
     func test_viewDidLoad_withWrongAnswer_renderWrongAnswerCell() {
@@ -52,7 +38,6 @@ class ResultsViewControllerTests: XCTestCase {
 
         XCTAssertNotNil(cell)
     }
-    
     
     
     // MARK: - Helpers
