@@ -18,11 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = QuestionViewController(
-            question: "Question",
-            options: ["Answer1", "Answer2", "Answer3", "Answer4"],
-            selection: { print($0) }
-        )
+        window?.rootViewController = ResultsViewController(summary: "You got 1/2", answers: [
+            PresentableAnswer(
+                question: "Long long long long long long long long long question question",
+                answer: "yes long",
+                wrongAnswer: nil
+            ),
+            PresentableAnswer(
+                question: "Hard question",
+                answer: "is it",
+                wrongAnswer: "yes it is"
+            )
+        ])
         window?.makeKeyAndVisible()
     }
 
