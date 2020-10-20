@@ -17,12 +17,12 @@ class ResultsViewControllerTests: XCTestCase {
     
     func test_viewDidLoad_createAnswerCells() {
         XCTAssertEqual(makeSUT(answers: []).tableView.numberOfRows(inSection: 0), 0)
-        XCTAssertEqual(makeSUT(answers: [makeDummyAnswer()]).tableView.numberOfRows(inSection: 0), 1)
-        XCTAssertEqual(makeSUT(answers: [makeDummyAnswer(), makeDummyAnswer()]).tableView.numberOfRows(inSection: 0), 2)
+        XCTAssertEqual(makeSUT(answers: [makeAnswer()]).tableView.numberOfRows(inSection: 0), 1)
+        XCTAssertEqual(makeSUT(answers: [makeAnswer(), makeAnswer()]).tableView.numberOfRows(inSection: 0), 2)
     }
     
     func test_viewDidLoad_withCorrectAnswer_configureCorrectAnswerCell() {
-        let sut = makeSUT(answers: [makeAnswer(question: "Q1",answer: "A1", isCorrect: true)])
+        let sut = makeSUT(answers: [makeAnswer(question: "Q1",answer: "A1")])
         
         let cell = sut.tableView.cell(for: 0) as? CorrectAnswerCell
 
@@ -32,7 +32,7 @@ class ResultsViewControllerTests: XCTestCase {
     }
     
     func test_viewDidLoad_withWrongAnswer_configureWrongAnswerCell() {
-        let answer = makeAnswer(question: "Q1", answer: "A1", wrongAnswer: "A2", isCorrect: false)
+        let answer = makeAnswer(question: "Q1", answer: "A1", wrongAnswer: "A2")
         let sut = makeSUT(answers: [answer])
         
         let cell = sut.tableView.cell(for: 0) as? WrongAnswerCell
@@ -52,22 +52,16 @@ class ResultsViewControllerTests: XCTestCase {
         return sut
     }
     
-    private func makeDummyAnswer() -> PresentableAnswer {
-        return makeAnswer(isCorrect: [false, true].randomElement()!)
-    }
-    
     private func makeAnswer(
         question: String = "",
         answer: String = "",
-        wrongAnswer: String? = nil,
-        isCorrect: Bool
+        wrongAnswer: String? = nil
     ) -> PresentableAnswer {
         
         return PresentableAnswer(
             question: question,
             answer: answer,
-            wrongAnswer: wrongAnswer,
-            isCorrect: isCorrect
+            wrongAnswer: wrongAnswer
         )
     }
 
