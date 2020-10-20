@@ -22,20 +22,30 @@ class ResultsViewControllerTests: XCTestCase {
     }
     
     func test_viewDidLoad_withCorrectAnswer_renderCorrectAnswerCell() {
-        let sut = makeSUT(answers: [PresentableAnswer(isCorrect: true)])
+        let sut = makeSUT(answers: [makeAnswer(isCorrect: true)])
         
         let cell = sut.tableView.cell(for: 0) as? CorrectAnswerCell
 
         XCTAssertNotNil(cell)
     }
     
+    func test_viewDidLoad_withCorrectAnswerCell_renderQuestionText() {
+        let sut = makeSUT(answers: [makeAnswer(question: "Q1", isCorrect: true)])
+        
+        let cell = sut.tableView.cell(for: 0) as! CorrectAnswerCell
+
+        XCTAssertEqual(cell.questionLabel.text, "Q1")
+    }
+    
     func test_viewDidLoad_withWrongAnswer_renderWrongAnswerCell() {
-        let sut = makeSUT(answers: [PresentableAnswer(isCorrect: false)])
+        let sut = makeSUT(answers: [makeAnswer(isCorrect: false)])
 
         let cell = sut.tableView.cell(for: 0) as? WrongAnswerCell
 
         XCTAssertNotNil(cell)
     }
+    
+    
     
     // MARK: - Helpers
     
@@ -46,7 +56,11 @@ class ResultsViewControllerTests: XCTestCase {
     }
     
     private func makeDummyAnswer() -> PresentableAnswer {
-        return PresentableAnswer(isCorrect: [false, true].randomElement()!)
+        return makeAnswer(isCorrect: [false, true].randomElement()!)
+    }
+    
+    private func makeAnswer(question: String = "", isCorrect: Bool) -> PresentableAnswer {
+        return PresentableAnswer(question: question, isCorrect: isCorrect)
     }
 
 }
