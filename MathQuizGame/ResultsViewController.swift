@@ -7,27 +7,6 @@
 
 import UIKit
 
-struct PresentableAnswer {
-    let question: String
-    let answer: String
-    let wrongAnswer: String?
-}
-
-class CorrectAnswerCell: UITableViewCell {
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerLabel: UILabel!
-    
-}
-
-class WrongAnswerCell: UITableViewCell {
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var correctAnswerLabel: UILabel!
-    @IBOutlet weak var wrongAnswerLabel: UILabel!
-    
-}
-
 class ResultsViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -49,8 +28,8 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "CorrectAnswerCell", bundle: nil), forCellReuseIdentifier: "CorrectAnswerCell")
-        tableView.register(UINib(nibName: "WrongAnswerCell", bundle: nil), forCellReuseIdentifier: "WrongAnswerCell")
+        tableView.register(CorrectAnswerCell.self)
+        tableView.register(WrongAnswerCell.self)
         headerLabel.text = summary
     }
 
@@ -68,7 +47,7 @@ extension ResultsViewController: UITableViewDataSource {
     }
     
     private func correctAnswerCell(for answer: PresentableAnswer) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CorrectAnswerCell") as! CorrectAnswerCell
+        let cell = tableView.dequeue(CorrectAnswerCell.self)!
         cell.questionLabel.text = answer.question
         cell.answerLabel.text = answer.answer
         return cell

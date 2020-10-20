@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6A34886A253EDC96007386B4 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */; };
 		6A34886F253EE2AE007386B4 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */; };
+		6A348874253EE8F5007386B4 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A348873253EE8F5007386B4 /* UITableViewExtension.swift */; };
+		6A348879253EE93B007386B4 /* PresentableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A348878253EE93B007386B4 /* PresentableAnswer.swift */; };
+		6A34887E253EE959007386B4 /* CorrectAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A34887D253EE959007386B4 /* CorrectAnswerCell.swift */; };
+		6A348883253EE96D007386B4 /* WrongAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A348882253EE96D007386B4 /* WrongAnswerCell.swift */; };
 		6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA647253C1FFA00C2027D /* AppDelegate.swift */; };
 		6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */; };
 		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
@@ -43,6 +47,10 @@
 /* Begin PBXFileReference section */
 		6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
+		6A348873253EE8F5007386B4 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		6A348878253EE93B007386B4 /* PresentableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableAnswer.swift; sourceTree = "<group>"; };
+		6A34887D253EE959007386B4 /* CorrectAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerCell.swift; sourceTree = "<group>"; };
+		6A348882253EE96D007386B4 /* WrongAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerCell.swift; sourceTree = "<group>"; };
 		6A6DA644253C1FF900C2027D /* MathQuizGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathQuizGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DA647253C1FFA00C2027D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +130,10 @@
 				6A6DA6A0253D665A00C2027D /* ResultsViewController.xib */,
 				6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */,
 				6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */,
+				6A348873253EE8F5007386B4 /* UITableViewExtension.swift */,
+				6A348878253EE93B007386B4 /* PresentableAnswer.swift */,
+				6A34887D253EE959007386B4 /* CorrectAnswerCell.swift */,
+				6A348882253EE96D007386B4 /* WrongAnswerCell.swift */,
 			);
 			path = MathQuizGame;
 			sourceTree = "<group>";
@@ -281,7 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */,
+				6A348874253EE8F5007386B4 /* UITableViewExtension.swift in Sources */,
+				6A34887E253EE959007386B4 /* CorrectAnswerCell.swift in Sources */,
 				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
+				6A348879253EE93B007386B4 /* PresentableAnswer.swift in Sources */,
+				6A348883253EE96D007386B4 /* WrongAnswerCell.swift in Sources */,
 				6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */,
 				6A6DA6A1253D665A00C2027D /* ResultsViewController.swift in Sources */,
 			);
