@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6A34886A253EDC96007386B4 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */; };
+		6A34886F253EE2AE007386B4 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */; };
 		6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA647253C1FFA00C2027D /* AppDelegate.swift */; };
 		6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */; };
 		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
+		6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
 		6A6DA644253C1FF900C2027D /* MathQuizGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathQuizGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DA647253C1FFA00C2027D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				6A6DA69F253D665A00C2027D /* ResultsViewController.swift */,
 				6A6DA6A0253D665A00C2027D /* ResultsViewController.xib */,
 				6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */,
+				6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */,
 			);
 			path = MathQuizGame;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */,
+				6A34886F253EE2AE007386B4 /* WrongAnswerCell.xib in Resources */,
 				6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */,
 				6A6DA696253C234A00C2027D /* QuestionViewController.xib in Resources */,
 				6A34886A253EDC96007386B4 /* CorrectAnswerCell.xib in Resources */,
