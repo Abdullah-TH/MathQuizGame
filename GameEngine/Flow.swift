@@ -17,6 +17,7 @@ protocol Router {
 
 struct GameResult<Question: Hashable, Answer> {
     let answers: [Question: Answer]
+    let score: Int 
 }
 
 final class Flow<Question, Answer, R: Router> where R.Question == Question, R.Answer == Answer {
@@ -24,10 +25,16 @@ final class Flow<Question, Answer, R: Router> where R.Question == Question, R.An
     private let router: R
     private let questions: [Question]
     private var answers: [Question: Answer] = [:]
+    private let scoring: ([Question: Answer]) -> Int
     
-    init(questions: [Question], router: R) {
+    init(
+        questions: [Question],
+        router: R,
+        scoring: @escaping ([Question: Answer]) -> Int
+    ) {
         self.router = router
         self.questions = questions
+        self.scoring = scoring
     }
     
     func start() {
@@ -58,6 +65,6 @@ final class Flow<Question, Answer, R: Router> where R.Question == Question, R.An
     }
     
     private func gameResult() -> GameResult<Question, Answer> {
-        return GameResult(answers: answers)
+        return GameResult(answers: answers, score: scoring(answers))
     }
 }
