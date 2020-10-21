@@ -10,6 +10,8 @@
 		6A07D31D253B7CD500A94EEF /* GameEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A07D313253B7CD500A94EEF /* GameEngine.framework */; };
 		6A07D332253B7D3F00A94EEF /* FlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07D331253B7D3F00A94EEF /* FlowTests.swift */; };
 		6A07D336253B7E4300A94EEF /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A07D335253B7E4300A94EEF /* Flow.swift */; };
+		6A34888A25401676007386B4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A34888925401676007386B4 /* Router.swift */; };
+		6A34888E25401686007386B4 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A34888D25401686007386B4 /* GameResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		6A07D323253B7CD500A94EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A07D331253B7D3F00A94EEF /* FlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTests.swift; sourceTree = "<group>"; };
 		6A07D335253B7E4300A94EEF /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
+		6A34888925401676007386B4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		6A34888D25401686007386B4 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				6A07D317253B7CD500A94EEF /* Info.plist */,
 				6A07D335253B7E4300A94EEF /* Flow.swift */,
+				6A34888925401676007386B4 /* Router.swift */,
+				6A34888D25401686007386B4 /* GameResult.swift */,
 			);
 			path = GameEngine;
 			sourceTree = "<group>";
@@ -195,7 +201,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A34888A25401676007386B4 /* Router.swift in Sources */,
 				6A07D336253B7E4300A94EEF /* Flow.swift in Sources */,
+				6A34888E25401686007386B4 /* GameResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
