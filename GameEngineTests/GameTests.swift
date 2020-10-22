@@ -18,6 +18,13 @@ class GameTests: XCTestCase {
         XCTAssertTrue(router.routedQuestions.isEmpty)
     }
     
+    func test_game_withQuestionsButNotStarted_doesNotRouteToQuestionsOrResult() {
+        let (_, router) = makeSUT(questions: ["Q1"])
+        
+        XCTAssertTrue(router.routedQuestions.isEmpty)
+        XCTAssertNil(router.routedResult)
+    }
+    
     func test_gameStart_withOneQuestion_routeToCorrectQuestion() {
         let (game, router) = makeSUT(questions: ["Q1"])
         
