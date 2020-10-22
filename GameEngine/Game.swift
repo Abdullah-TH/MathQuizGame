@@ -19,7 +19,9 @@ public class Game<Question, Answer: Equatable, R: Router> where R.Question == Qu
         flow = Flow(questions: questions, router: router, scoring: { answers in
             scoring(answers: answers, correctAnswers: correctAnswers)
         })
-        
+    }
+    
+    public func start() {
         flow.start()
     }
 }
