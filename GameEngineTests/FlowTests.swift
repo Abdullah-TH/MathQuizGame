@@ -145,19 +145,4 @@ class FlowTests: XCTestCase {
         )
     }
 
-    class RouterSpy: Router {
-        
-        var routedQuestions: [String] = []
-        var routedResult: GameResult<String, String>? = nil
-        var answerCallback: (String) -> Void = { _ in }
-        
-        func route(to question: String, answerCallback: @escaping (String) -> Void) {
-            routedQuestions.append(question)
-            self.answerCallback = answerCallback
-        }
-        
-        func route(to result: GameResult<String, String>) {
-            routedResult = result
-        }
-    }
 }
