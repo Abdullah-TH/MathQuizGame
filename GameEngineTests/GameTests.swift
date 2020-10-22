@@ -16,7 +16,7 @@ class GameTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        game = startGame(
+        game = Game(
             questions: ["Q1", "Q2"],
             router: router,
             correctAnswers: ["Q1": "A1", "Q2": "A2"]
