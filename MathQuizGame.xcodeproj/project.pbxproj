@@ -25,6 +25,8 @@
 		6A6DA6A2253D665A00C2027D /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A0253D665A00C2027D /* ResultsViewController.xib */; };
 		6A6DA6A7253D667100C2027D /* ResultsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */; };
 		6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */; };
+		6A98D3192544804400B24AA6 /* GameEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A98D3182544804400B24AA6 /* GameEngine.framework */; };
+		6A98D31A2544804400B24AA6 /* GameEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A98D3182544804400B24AA6 /* GameEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,20 @@
 			remoteInfo = MathQuizGame;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6A98D31B2544804400B24AA6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6A98D31A2544804400B24AA6 /* GameEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
@@ -69,6 +85,7 @@
 		6A6DA6A0253D665A00C2027D /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTests.swift; sourceTree = "<group>"; };
 		6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
+		6A98D3182544804400B24AA6 /* GameEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A98D3192544804400B24AA6 /* GameEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +121,7 @@
 				6A6DA65D253C1FFA00C2027D /* MathQuizGameTests */,
 				6A6DA668253C1FFA00C2027D /* MathQuizGameUITests */,
 				6A6DA645253C1FF900C2027D /* Products */,
+				6A98D3172544804400B24AA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +177,14 @@
 			path = MathQuizGameUITests;
 			sourceTree = "<group>";
 		};
+		6A98D3172544804400B24AA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A98D3182544804400B24AA6 /* GameEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +195,7 @@
 				6A6DA640253C1FF900C2027D /* Sources */,
 				6A6DA641253C1FF900C2027D /* Frameworks */,
 				6A6DA642253C1FF900C2027D /* Resources */,
+				6A98D31B2544804400B24AA6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
