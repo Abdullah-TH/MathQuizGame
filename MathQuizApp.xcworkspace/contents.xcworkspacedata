@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../GameEngine/GameEngine.xcodeproj">
+      location = "group:GameEngine.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:MathQuizGame.xcodeproj">
