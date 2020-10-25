@@ -7,12 +7,12 @@
 		<key>GameEngine.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>0</integer>
 		</dict>
 		<key>GameEngineTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>6A07D31B253B7CD500A94EEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A3385BF25455DB40097D639</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6A3385C725455DB40097D639</key>
 		<dict>
 			<key>primary</key>
 			<true/>
