@@ -29,6 +29,7 @@
 		6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */; };
 		6A98D3192544804400B24AA6 /* GameEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A98D3182544804400B24AA6 /* GameEngine.framework */; };
 		6A98D31A2544804400B24AA6 /* GameEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A98D3182544804400B24AA6 /* GameEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6ABAE2112545C452005ECB3E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABAE2102545C452005ECB3E /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTests.swift; sourceTree = "<group>"; };
 		6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		6A98D3182544804400B24AA6 /* GameEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ABAE2102545C452005ECB3E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				6A34887D253EE959007386B4 /* CorrectAnswerCell.swift */,
 				6A348882253EE96D007386B4 /* WrongAnswerCell.swift */,
 				6A33858C254559360097D639 /* NavigationControllerRouter.swift */,
+				6ABAE2102545C452005ECB3E /* Question.swift */,
 			);
 			path = MathQuizGame;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				6A34887E253EE959007386B4 /* CorrectAnswerCell.swift in Sources */,
 				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
 				6A348879253EE93B007386B4 /* PresentableAnswer.swift in Sources */,
+				6ABAE2112545C452005ECB3E /* Question.swift in Sources */,
 				6A348883253EE96D007386B4 /* WrongAnswerCell.swift in Sources */,
 				6A33858D254559360097D639 /* NavigationControllerRouter.swift in Sources */,
 				6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */,

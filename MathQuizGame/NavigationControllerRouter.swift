@@ -9,7 +9,11 @@ import UIKit
 import GameEngine
 
 protocol ViewControllerFactory {
-    func questionViewController(for question: String, answerCallback: @escaping (String) -> Void) -> UIViewController?
+    
+    func questionViewController(
+        for question: String,
+        answerCallback: @escaping (String) -> Void
+    ) -> UIViewController?
 }
 
 final class NavigationControllerRouter: Router {
