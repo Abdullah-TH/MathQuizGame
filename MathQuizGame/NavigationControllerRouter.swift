@@ -11,8 +11,12 @@ import GameEngine
 protocol ViewControllerFactory {
     
     func questionViewController(
-        for question: String,
+        for question: Question<String>,
         answerCallback: @escaping (String) -> Void
+    ) -> UIViewController?
+    
+    func gameResultViewController(
+        for result: GameResult<Question<String>, String>
     ) -> UIViewController?
 }
 
@@ -26,14 +30,16 @@ final class NavigationControllerRouter: Router {
         self.factory = factory
     }
     
-    func route(to question: String, answerCallback: @escaping (String) -> Void) {
+    func route(to question: Question<String>, answerCallback: @escaping (String) -> Void) {
         if let viewController = factory.questionViewController(for: question, answerCallback: answerCallback) {
             navigationController.pushViewController(viewController, animated: true)
         }
     }
     
-    func route(to result: GameResult<String, String>) {
-        
+    func route(to result: GameResult<Question<String>, String>) {
+        if let viewController = factory.gameResultViewController(for: result) {
+            navigationController.pushViewController(viewController, animated: true)
+        }
     }
 }
  

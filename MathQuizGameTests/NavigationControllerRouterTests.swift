@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import MathQuizGame
+import GameEngine
 
 class NavigationControllerRouterTests: XCTestCase {
     
@@ -17,8 +18,8 @@ class NavigationControllerRouterTests: XCTestCase {
     }()
     
     func test_routeToQuestions_presentsTheCorrectQuestionViewControllers() {
-        let questionOne = "Q1"
-        let questionTwo = "Q2"
+        let questionOne = Question(value: "Q1")
+        let questionTwo = Question(value: "Q2")
         let viewController = UIViewController()
         let secondViewController = UIViewController()
         factory.stub(question: questionOne, with: viewController)
@@ -33,7 +34,7 @@ class NavigationControllerRouterTests: XCTestCase {
     }
     
     func test_routeToQuestion_presentsQuestionViewControllerWithAnswerCallback() {
-        let question = "Q1"
+        let question = Question(value: "Q1")
         factory.stub(question: question, with: UIViewController())
         
         var answerCallbackWasFired = false
@@ -54,20 +55,29 @@ class NavigationControllerRouterTests: XCTestCase {
     
     class ViewControllerFactoryStub: ViewControllerFactory {
         
-        private var stubbedQuestions = [String: UIViewController]()
-        var answerCallbacks = [String: (String) -> Void]()
+        private var stubbedQuestions = [Question<String>: UIViewController]()
+        var answerCallbacks = [Question<String>: (String) -> Void]()
         
-        func stub(question: String, with viewController: UIViewController) {
+        func stub(
+            question: Question<String>,
+            with viewController: UIViewController
+        ) {
             stubbedQuestions[question] = viewController
         }
         
         func questionViewController(
-            for question: String,
+            for question: Question<String>,
             answerCallback: @escaping (String) -> Void
         ) -> UIViewController? {
             
             answerCallbacks[question] = answerCallback
             return stubbedQuestions[question]
+        }
+        
+        func gameResultViewController(
+            for result: GameResult<Question<String>, String>
+        ) -> UIViewController? {
+            return nil
         }
     }
 
