@@ -8,18 +8,6 @@
 import UIKit
 import GameEngine
 
-protocol ViewControllerFactory {
-    
-    func questionViewController(
-        for question: Question<String>,
-        answerCallback: @escaping (String) -> Void
-    ) -> UIViewController?
-    
-    func gameResultViewController(
-        for result: GameResult<Question<String>, String>
-    ) -> UIViewController?
-}
-
 final class NavigationControllerRouter: Router {
     
     private let navigationController: UINavigationController
