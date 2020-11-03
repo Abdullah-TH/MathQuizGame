@@ -14,8 +14,8 @@ class QuestionViewController: UIViewController {
     
     private let reuseIdentifier = "OptionCell"
     
-    private let question: String
-    private let options: [String]
+    let question: String
+    let options: [String]
     private var selection: (String) -> Void
     
     init(
