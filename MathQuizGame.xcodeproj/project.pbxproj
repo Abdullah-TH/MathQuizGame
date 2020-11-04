@@ -33,6 +33,8 @@
 		6A98D3192544804400B24AA6 /* GameEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A98D3182544804400B24AA6 /* GameEngine.framework */; };
 		6A98D31A2544804400B24AA6 /* GameEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A98D3182544804400B24AA6 /* GameEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6ABAE2112545C452005ECB3E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABAE2102545C452005ECB3E /* Question.swift */; };
+		6AF2AE3A2552D45100C0BAE7 /* GameResultsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2AE392552D45100C0BAE7 /* GameResultsPresenterTests.swift */; };
+		6AF2AE3E2552D61A00C0BAE7 /* GameResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF2AE3D2552D61A00C0BAE7 /* GameResultPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
 		6A98D3182544804400B24AA6 /* GameEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABAE2102545C452005ECB3E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6AF2AE392552D45100C0BAE7 /* GameResultsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsPresenterTests.swift; sourceTree = "<group>"; };
+		6AF2AE3D2552D61A00C0BAE7 /* GameResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 				6ABAE2102545C452005ECB3E /* Question.swift */,
 				6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */,
 				6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */,
+				6AF2AE3D2552D61A00C0BAE7 /* GameResultPresenter.swift */,
 			);
 			path = MathQuizGame;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 				6A338588254558B40097D639 /* NavigationControllerRouterTests.swift */,
 				6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */,
 				6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */,
+				6AF2AE392552D45100C0BAE7 /* GameResultsPresenterTests.swift */,
 			);
 			path = MathQuizGameTests;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */,
+				6AF2AE3E2552D61A00C0BAE7 /* GameResultPresenter.swift in Sources */,
 				6A348874253EE8F5007386B4 /* UITableViewExtension.swift in Sources */,
 				6A34887E253EE959007386B4 /* CorrectAnswerCell.swift in Sources */,
 				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
@@ -360,6 +367,7 @@
 				6A338589254558B40097D639 /* NavigationControllerRouterTests.swift in Sources */,
 				6A6DA6A7253D667100C2027D /* ResultsViewControllerTests.swift in Sources */,
 				6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */,
+				6AF2AE3A2552D45100C0BAE7 /* GameResultsPresenterTests.swift in Sources */,
 				6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */,
 				6A866C0D2551AE430048DD58 /* iOSViewControllerFactoryTests.swift in Sources */,
 			);
