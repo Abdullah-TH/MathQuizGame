@@ -57,52 +57,36 @@ class GameResultsPresenterTests: XCTestCase {
         XCTAssertTrue(sut.presentableAnswers.isEmpty)
     }
     
-    func test_presentableAnswers_withGameResultOneCorrectAnswer_presentableAnswersMappedCorrectly() {
-        let sut = makeSUT(
-            questions: [questionOne],
-            userAnswers: [questionOne: answerOne],
-            correctAnswers: [questionOne: answerOne],
-            score: 1
-        )
-        
-        XCTAssertEqual(sut.presentableAnswers.count, 1)
-        XCTAssertEqual(sut.presentableAnswers.first?.question, questionOne.value)
-        XCTAssertEqual(sut.presentableAnswers.first?.answer, answerOne)
-        XCTAssertNil(sut.presentableAnswers.first?.wrongAnswer)
-    }
-    
-    func test_presentableAnswers_withGameResultOneWrongAnswer_presentableAnswersMappedCorrectly() {
-        let sut = makeSUT(
-            questions: [questionThree],
-            userAnswers: [questionThree: wrongAnswer],
-            correctAnswers: [questionThree: answerThree],
-            score: 0
-        )
-        
-        XCTAssertEqual(sut.presentableAnswers.count, 1)
-        XCTAssertEqual(sut.presentableAnswers.first?.question, questionThree.value)
-        XCTAssertEqual(sut.presentableAnswers.first?.answer, answerThree)
-        XCTAssertEqual(sut.presentableAnswers.first?.wrongAnswer, wrongAnswer)
-    }
-    
     func test_presentableAnswers_withTwoQuestions_presentableAnswersMappedCorrectlyAndInOrder() {
-        let orderedQuestions = [questionOne, questionTwo]
+        let orderedQuestions = [questionOne, questionTwo, questionThree]
         let sut = makeSUT(
             questions: orderedQuestions,
-            userAnswers: [questionTwo: answerTwo, questionOne: answerOne],
-            correctAnswers: [questionTwo: answerTwo, questionOne: answerOne],
+            userAnswers: [
+                questionTwo: answerTwo,
+                questionThree: wrongAnswer,
+                questionOne: answerOne
+            ],
+            correctAnswers: [
+                questionThree: answerThree,
+                questionTwo: answerTwo,
+                questionOne: answerOne
+            ],
             score: 0
         )
         
-        XCTAssertEqual(sut.presentableAnswers.count, 2)
+        XCTAssertEqual(sut.presentableAnswers.count, 3)
         
         XCTAssertEqual(sut.presentableAnswers.first?.question, questionOne.value)
         XCTAssertEqual(sut.presentableAnswers.first?.answer, answerOne)
         XCTAssertNil(sut.presentableAnswers.first?.wrongAnswer)
         
-        XCTAssertEqual(sut.presentableAnswers.last?.question, questionTwo.value)
-        XCTAssertEqual(sut.presentableAnswers.last?.answer, answerTwo)
-        XCTAssertNil(sut.presentableAnswers.last?.wrongAnswer)
+        XCTAssertEqual(sut.presentableAnswers[1].question, questionTwo.value)
+        XCTAssertEqual(sut.presentableAnswers[1].answer, answerTwo)
+        XCTAssertNil(sut.presentableAnswers[1].wrongAnswer)
+        
+        XCTAssertEqual(sut.presentableAnswers.last?.question, questionThree.value)
+        XCTAssertEqual(sut.presentableAnswers.last?.answer, answerThree)
+        XCTAssertNotNil(sut.presentableAnswers.last?.wrongAnswer)
     }
     
     

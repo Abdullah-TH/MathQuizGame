@@ -27,6 +27,8 @@
 		6A6DA6A2253D665A00C2027D /* ResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A0253D665A00C2027D /* ResultsViewController.xib */; };
 		6A6DA6A7253D667100C2027D /* ResultsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */; };
 		6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */; };
+		6A739FE425581C83005D93F0 /* QuestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A739FE325581C83005D93F0 /* QuestionPresenterTests.swift */; };
+		6A739FE825581D85005D93F0 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A739FE725581D85005D93F0 /* QuestionPresenter.swift */; };
 		6A866C092551ADC00048DD58 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */; };
 		6A866C0D2551AE430048DD58 /* iOSViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */; };
 		6A866C112551AF230048DD58 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */; };
@@ -95,6 +97,8 @@
 		6A6DA6A0253D665A00C2027D /* ResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsViewController.xib; sourceTree = "<group>"; };
 		6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTests.swift; sourceTree = "<group>"; };
 		6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
+		6A739FE325581C83005D93F0 /* QuestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTests.swift; sourceTree = "<group>"; };
+		6A739FE725581D85005D93F0 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
 		6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactoryTests.swift; sourceTree = "<group>"; };
 		6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */,
 				6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */,
 				6AF2AE3D2552D61A00C0BAE7 /* GameResultPresenter.swift */,
+				6A739FE725581D85005D93F0 /* QuestionPresenter.swift */,
 			);
 			path = MathQuizGame;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */,
 				6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */,
 				6AF2AE392552D45100C0BAE7 /* GameResultsPresenterTests.swift */,
+				6A739FE325581C83005D93F0 /* QuestionPresenterTests.swift */,
 			);
 			path = MathQuizGameTests;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				6A348879253EE93B007386B4 /* PresentableAnswer.swift in Sources */,
 				6ABAE2112545C452005ECB3E /* Question.swift in Sources */,
 				6A348883253EE96D007386B4 /* WrongAnswerCell.swift in Sources */,
+				6A739FE825581D85005D93F0 /* QuestionPresenter.swift in Sources */,
 				6A866C112551AF230048DD58 /* iOSViewControllerFactory.swift in Sources */,
 				6A33858D254559360097D639 /* NavigationControllerRouter.swift in Sources */,
 				6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */,
@@ -365,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A338589254558B40097D639 /* NavigationControllerRouterTests.swift in Sources */,
+				6A739FE425581C83005D93F0 /* QuestionPresenterTests.swift in Sources */,
 				6A6DA6A7253D667100C2027D /* ResultsViewControllerTests.swift in Sources */,
 				6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */,
 				6AF2AE3A2552D45100C0BAE7 /* GameResultsPresenterTests.swift in Sources */,
