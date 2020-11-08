@@ -10,12 +10,21 @@ import XCTest
 import GameEngine
 
 class GameResultsPresenterTests: XCTestCase {
+    
+    let questionOne = Question(value: "Q1")
+    let questionTwo = Question(value: "Q2")
+    let questionThree = Question(value: "Q3")
+    
+    let answerOne = "A1"
+    let answerTwo = "A2"
+    let answerThree = "A3"
+    let wrongAnswer = "A99"
 
     func test_summary_withTwoQuestionsAndScoreOne_returnCorrectSummary() {
         let sut = makeSUT(
             userAnswers: [
-                Question(value: "Q1"): "A1",
-                Question(value: "Q2"): "wrong"
+                questionOne: answerOne,
+                questionTwo: wrongAnswer
             ],
             score: 1
         )
@@ -26,9 +35,9 @@ class GameResultsPresenterTests: XCTestCase {
     func test_summary_withThreeQuestionsAndScoreTwo_returnCorrectSummary() {
         let sut = makeSUT(
             userAnswers: [
-                Question(value: "Q1"): "A1",
-                Question(value: "Q2"): "A2",
-                Question(value: "Q3"): "wrong"
+                questionOne: answerOne,
+                questionTwo: answerTwo,
+                questionThree: wrongAnswer
             ],
             score: 2
         )
@@ -47,28 +56,28 @@ class GameResultsPresenterTests: XCTestCase {
     
     func test_presentableAnswers_withGameResultOneCorrectAnswer_presentableAnswersMappedCorrectly() {
         let sut = makeSUT(
-            userAnswers: [Question(value: "Q1"): "A1"],
-            correctAnswers: [Question(value: "Q1"): "A1"],
+            userAnswers: [questionOne: answerOne],
+            correctAnswers: [questionOne: answerOne],
             score: 1
         )
         
         XCTAssertEqual(sut.presentableAnswers.count, 1)
-        XCTAssertEqual(sut.presentableAnswers.first?.question, "Q1")
-        XCTAssertEqual(sut.presentableAnswers.first?.answer, "A1")
+        XCTAssertEqual(sut.presentableAnswers.first?.question, questionOne.value)
+        XCTAssertEqual(sut.presentableAnswers.first?.answer, answerOne)
         XCTAssertNil(sut.presentableAnswers.first?.wrongAnswer)
     }
     
     func test_presentableAnswers_withGameResultOneWrongAnswer_presentableAnswersMappedCorrectly() {
         let sut = makeSUT(
-            userAnswers: [Question(value: "Q3"): "A9"],
-            correctAnswers: [Question(value: "Q3"): "A3"],
+            userAnswers: [questionThree: wrongAnswer],
+            correctAnswers: [questionThree: answerThree],
             score: 0
         )
         
         XCTAssertEqual(sut.presentableAnswers.count, 1)
-        XCTAssertEqual(sut.presentableAnswers.first?.question, "Q3")
-        XCTAssertEqual(sut.presentableAnswers.first?.answer, "A3")
-        XCTAssertEqual(sut.presentableAnswers.first?.wrongAnswer, "A9")
+        XCTAssertEqual(sut.presentableAnswers.first?.question, questionThree.value)
+        XCTAssertEqual(sut.presentableAnswers.first?.answer, answerThree)
+        XCTAssertEqual(sut.presentableAnswers.first?.wrongAnswer, wrongAnswer)
     }
     
     
