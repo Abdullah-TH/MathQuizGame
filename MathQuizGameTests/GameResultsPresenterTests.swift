@@ -22,6 +22,7 @@ class GameResultsPresenterTests: XCTestCase {
 
     func test_summary_withTwoQuestionsAndScoreOne_returnCorrectSummary() {
         let sut = makeSUT(
+            questions: [],
             userAnswers: [
                 questionOne: answerOne,
                 questionTwo: wrongAnswer
@@ -34,6 +35,7 @@ class GameResultsPresenterTests: XCTestCase {
     
     func test_summary_withThreeQuestionsAndScoreTwo_returnCorrectSummary() {
         let sut = makeSUT(
+            questions: [],
             userAnswers: [
                 questionOne: answerOne,
                 questionTwo: answerTwo,
@@ -47,6 +49,7 @@ class GameResultsPresenterTests: XCTestCase {
     
     func test_presentableAnswers_withGameResultEmpty_presentableAnswersShouldBeEmpty() {
         let sut = makeSUT(
+            questions: [],
             userAnswers: [:],
             score: 0
         )
@@ -56,6 +59,7 @@ class GameResultsPresenterTests: XCTestCase {
     
     func test_presentableAnswers_withGameResultOneCorrectAnswer_presentableAnswersMappedCorrectly() {
         let sut = makeSUT(
+            questions: [questionOne],
             userAnswers: [questionOne: answerOne],
             correctAnswers: [questionOne: answerOne],
             score: 1
@@ -69,6 +73,7 @@ class GameResultsPresenterTests: XCTestCase {
     
     func test_presentableAnswers_withGameResultOneWrongAnswer_presentableAnswersMappedCorrectly() {
         let sut = makeSUT(
+            questions: [questionThree],
             userAnswers: [questionThree: wrongAnswer],
             correctAnswers: [questionThree: answerThree],
             score: 0
@@ -80,17 +85,42 @@ class GameResultsPresenterTests: XCTestCase {
         XCTAssertEqual(sut.presentableAnswers.first?.wrongAnswer, wrongAnswer)
     }
     
+    func test_presentableAnswers_withTwoQuestions_presentableAnswersMappedCorrectlyAndInOrder() {
+        let orderedQuestions = [questionOne, questionTwo]
+        let sut = makeSUT(
+            questions: orderedQuestions,
+            userAnswers: [questionTwo: answerTwo, questionOne: answerOne],
+            correctAnswers: [questionTwo: answerTwo, questionOne: answerOne],
+            score: 0
+        )
+        
+        XCTAssertEqual(sut.presentableAnswers.count, 2)
+        
+        XCTAssertEqual(sut.presentableAnswers.first?.question, questionOne.value)
+        XCTAssertEqual(sut.presentableAnswers.first?.answer, answerOne)
+        XCTAssertNil(sut.presentableAnswers.first?.wrongAnswer)
+        
+        XCTAssertEqual(sut.presentableAnswers.last?.question, questionTwo.value)
+        XCTAssertEqual(sut.presentableAnswers.last?.answer, answerTwo)
+        XCTAssertNil(sut.presentableAnswers.last?.wrongAnswer)
+    }
+    
     
     // MARK: - Helpers
     
     private func makeSUT(
+        questions: [Question<String>],
         userAnswers: [Question<String>: String],
         correctAnswers: [Question<String>: String] = [:],
         score: Int
     ) -> GameResultPresenter {
         
         let gameResult = GameResult(answers: userAnswers, score: score)
-        return GameResultPresenter(gameResult: gameResult, correctAnswers: correctAnswers)
+        return GameResultPresenter(
+            questions: questions,
+            gameResult: gameResult,
+            correctAnswers: correctAnswers
+        )
     }
 
 }

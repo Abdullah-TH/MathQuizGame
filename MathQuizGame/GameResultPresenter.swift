@@ -10,6 +10,7 @@ import GameEngine
 
 struct GameResultPresenter {
     
+    let questions: [Question<String>]
     let gameResult: GameResult<Question<String>, String>
     let correctAnswers: [Question<String>: String]
     
@@ -18,9 +19,11 @@ struct GameResultPresenter {
     }
     
     var presentableAnswers: [PresentableAnswer] {
-        gameResult.answers.map { (question, userAnswer) in
+        questions.map { question in
             
-            guard let correctAnswer = correctAnswers[question] else {
+            guard let userAnswer = gameResult.answers[question],
+                  let correctAnswer = correctAnswers[question]
+            else {
                 fatalError("Couldn't find correct answer for: \(question)")
             }
             
