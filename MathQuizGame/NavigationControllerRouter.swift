@@ -19,15 +19,13 @@ final class NavigationControllerRouter: Router {
     }
     
     func route(to question: Question<String>, answerCallback: @escaping (String) -> Void) {
-        if let viewController = factory.questionViewController(for: question, answerCallback: answerCallback) {
-            navigationController.pushViewController(viewController, animated: true)
-        }
+        let viewController = factory.questionViewController(for: question, answerCallback: answerCallback)
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func route(to result: GameResult<Question<String>, String>) {
-        if let viewController = factory.gameResultViewController(for: result) {
-            navigationController.pushViewController(viewController, animated: true)
-        }
+        let viewController = factory.gameResultViewController(for: result)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
  

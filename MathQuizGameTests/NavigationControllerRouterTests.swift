@@ -68,16 +68,16 @@ class NavigationControllerRouterTests: XCTestCase {
         func questionViewController(
             for question: Question<String>,
             answerCallback: @escaping (String) -> Void
-        ) -> UIViewController? {
+        ) -> UIViewController {
             
             answerCallbacks[question] = answerCallback
-            return stubbedQuestions[question]
+            return stubbedQuestions[question]!
         }
         
         func gameResultViewController(
             for result: GameResult<Question<String>, String>
-        ) -> UIViewController? {
-            return nil
+        ) -> UIViewController {
+            return UIViewController()
         }
     }
 

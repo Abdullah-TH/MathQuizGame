@@ -13,9 +13,9 @@ protocol ViewControllerFactory {
     func questionViewController(
         for question: Question<String>,
         answerCallback: @escaping (String) -> Void
-    ) -> UIViewController?
+    ) -> UIViewController
     
     func gameResultViewController(
         for result: GameResult<Question<String>, String>
-    ) -> UIViewController?
+    ) -> UIViewController
 }

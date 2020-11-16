@@ -18,7 +18,7 @@ final class iOSViewControllerFactory: ViewControllerFactory {
         self.options = options
     }
     
-    func questionViewController(for question: Question<String>, answerCallback: @escaping (String) -> Void) -> UIViewController? {
+    func questionViewController(for question: Question<String>, answerCallback: @escaping (String) -> Void) -> UIViewController {
         let presenter = QuestionPresenter(questions: questions, question: question)
         let questionVC = QuestionViewController(
             question: question.value,
@@ -29,7 +29,7 @@ final class iOSViewControllerFactory: ViewControllerFactory {
         return questionVC
     }
     
-    func gameResultViewController(for result: GameResult<Question<String>, String>) -> UIViewController? {
+    func gameResultViewController(for result: GameResult<Question<String>, String>) -> UIViewController {
         return UIViewController()
     }
     
