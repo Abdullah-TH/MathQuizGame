@@ -13,13 +13,14 @@ class NavigationControllerRouterTests: XCTestCase {
     
     let navigationController = NonAnimatedNavigationController()
     let factory = ViewControllerFactoryStub()
+    let questionOne = Question(value: "Q1")
+    let questionTwo = Question(value: "Q2")
+    
     lazy var sut: NavigationControllerRouter = {
         NavigationControllerRouter(navigationController, factory: factory)
     }()
     
     func test_routeToQuestions_presentsTheCorrectQuestionViewControllers() {
-        let questionOne = Question(value: "Q1")
-        let questionTwo = Question(value: "Q2")
         let viewController = UIViewController()
         let secondViewController = UIViewController()
         factory.stub(question: questionOne, with: viewController)
@@ -34,12 +35,11 @@ class NavigationControllerRouterTests: XCTestCase {
     }
     
     func test_routeToQuestion_presentsQuestionViewControllerWithAnswerCallback() {
-        let question = Question(value: "Q1")
-        factory.stub(question: question, with: UIViewController())
+        factory.stub(question: questionOne, with: UIViewController())
         
         var answerCallbackWasFired = false
-        sut.route(to: question, answerCallback: { _ in answerCallbackWasFired = true })
-        factory.answerCallbacks[question]!("anything")
+        sut.route(to: questionOne, answerCallback: { _ in answerCallbackWasFired = true })
+        factory.answerCallbacks[questionOne]!("anything")
         
         XCTAssertTrue(answerCallbackWasFired)
     }
