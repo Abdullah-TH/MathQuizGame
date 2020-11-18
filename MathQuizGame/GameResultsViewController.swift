@@ -1,5 +1,5 @@
 //
-//  ResultsViewController.swift
+//  GameResultsViewController.swift
 //  MathQuizGame
 //
 //  Created by Abdullah Althobetey on 19/10/2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResultsViewController: UIViewController {
+class GameResultsViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -37,7 +37,7 @@ class ResultsViewController: UIViewController {
 
 }
 
-extension ResultsViewController: UITableViewDataSource {
+extension GameResultsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return answers.count
@@ -64,7 +64,7 @@ extension ResultsViewController: UITableViewDataSource {
     }
 }
 
-extension ResultsViewController: UITableViewDelegate {
+extension GameResultsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90 // just an estimation

@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ResultsViewController(summary: "You got 1/2", answers: [
+        window?.rootViewController = GameResultsViewController(summary: "You got 1/2", answers: [
             PresentableAnswer(
                 question: "Long long long long long long long long long question question",
                 answer: "yes long",
