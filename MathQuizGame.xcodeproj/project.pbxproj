@@ -23,9 +23,9 @@
 		6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA693253C234A00C2027D /* QuestionViewController.swift */; };
 		6A6DA696253C234A00C2027D /* QuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA694253C234A00C2027D /* QuestionViewController.xib */; };
 		6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */; };
-		6A6DA6A1253D665A00C2027D /* GameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA69F253D665A00C2027D /* GameResultsViewController.swift */; };
-		6A6DA6A2253D665A00C2027D /* GameResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A0253D665A00C2027D /* GameResultsViewController.xib */; };
-		6A6DA6A7253D667100C2027D /* ResultsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */; };
+		6A6DA6A1253D665A00C2027D /* GameResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA69F253D665A00C2027D /* GameResultViewController.swift */; };
+		6A6DA6A2253D665A00C2027D /* GameResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A0253D665A00C2027D /* GameResultViewController.xib */; };
+		6A6DA6A7253D667100C2027D /* ResultViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */; };
 		6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */; };
 		6A739FE425581C83005D93F0 /* QuestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A739FE325581C83005D93F0 /* QuestionPresenterTests.swift */; };
 		6A739FE825581D85005D93F0 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A739FE725581D85005D93F0 /* QuestionPresenter.swift */; };
@@ -93,9 +93,9 @@
 		6A6DA693253C234A00C2027D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		6A6DA694253C234A00C2027D /* QuestionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionViewController.xib; sourceTree = "<group>"; };
 		6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTests.swift; sourceTree = "<group>"; };
-		6A6DA69F253D665A00C2027D /* GameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsViewController.swift; sourceTree = "<group>"; };
-		6A6DA6A0253D665A00C2027D /* GameResultsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultsViewController.xib; sourceTree = "<group>"; };
-		6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewControllerTests.swift; sourceTree = "<group>"; };
+		6A6DA69F253D665A00C2027D /* GameResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultViewController.swift; sourceTree = "<group>"; };
+		6A6DA6A0253D665A00C2027D /* GameResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultViewController.xib; sourceTree = "<group>"; };
+		6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTests.swift; sourceTree = "<group>"; };
 		6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		6A739FE325581C83005D93F0 /* QuestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTests.swift; sourceTree = "<group>"; };
 		6A739FE725581D85005D93F0 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 				6A6DA655253C1FFA00C2027D /* Info.plist */,
 				6A6DA693253C234A00C2027D /* QuestionViewController.swift */,
 				6A6DA694253C234A00C2027D /* QuestionViewController.xib */,
-				6A6DA69F253D665A00C2027D /* GameResultsViewController.swift */,
-				6A6DA6A0253D665A00C2027D /* GameResultsViewController.xib */,
+				6A6DA69F253D665A00C2027D /* GameResultViewController.swift */,
+				6A6DA6A0253D665A00C2027D /* GameResultViewController.xib */,
 				6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */,
 				6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */,
 				6A348873253EE8F5007386B4 /* UITableViewExtension.swift */,
@@ -188,7 +188,7 @@
 			children = (
 				6A6DA660253C1FFA00C2027D /* Info.plist */,
 				6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */,
-				6A6DA6A6253D667100C2027D /* ResultsViewControllerTests.swift */,
+				6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */,
 				6A338588254558B40097D639 /* NavigationControllerRouterTests.swift */,
 				6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */,
 				6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */,
@@ -325,7 +325,7 @@
 				6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */,
 				6A6DA696253C234A00C2027D /* QuestionViewController.xib in Resources */,
 				6A34886A253EDC96007386B4 /* CorrectAnswerCell.xib in Resources */,
-				6A6DA6A2253D665A00C2027D /* GameResultsViewController.xib in Resources */,
+				6A6DA6A2253D665A00C2027D /* GameResultViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +362,7 @@
 				6A866C112551AF230048DD58 /* iOSViewControllerFactory.swift in Sources */,
 				6A33858D254559360097D639 /* NavigationControllerRouter.swift in Sources */,
 				6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */,
-				6A6DA6A1253D665A00C2027D /* GameResultsViewController.swift in Sources */,
+				6A6DA6A1253D665A00C2027D /* GameResultViewController.swift in Sources */,
 				6A866C092551ADC00048DD58 /* ViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +373,7 @@
 			files = (
 				6A338589254558B40097D639 /* NavigationControllerRouterTests.swift in Sources */,
 				6A739FE425581C83005D93F0 /* QuestionPresenterTests.swift in Sources */,
-				6A6DA6A7253D667100C2027D /* ResultsViewControllerTests.swift in Sources */,
+				6A6DA6A7253D667100C2027D /* ResultViewControllerTests.swift in Sources */,
 				6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */,
 				6AF2AE3A2552D45100C0BAE7 /* GameResultsPresenterTests.swift in Sources */,
 				6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */,

@@ -41,7 +41,7 @@ final class iOSViewControllerFactory: ViewControllerFactory {
             gameResult: result,
             correctAnswers: correctAnswers)
         
-        let gameResultVC = GameResultsViewController(
+        let gameResultVC = GameResultViewController(
             summary: presenter.summary,
             answers: presenter.presentableAnswers
         )

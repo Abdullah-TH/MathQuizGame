@@ -1,5 +1,5 @@
 //
-//  GameResultsPresenterTests.swift
+//  GameResultPresenterTests.swift
 //  MathQuizGameTests
 //
 //  Created by Abdullah Althobetey on 04/11/2020.
@@ -9,7 +9,7 @@ import XCTest
 @testable import MathQuizGame
 import GameEngine
 
-class GameResultsPresenterTests: XCTestCase {
+class GameResultPresenterTests: XCTestCase {
     
     let questionOne = Question(value: "Q1")
     let questionTwo = Question(value: "Q2")

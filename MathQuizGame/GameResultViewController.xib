@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameResultsViewController" customModule="MathQuizGame" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameResultViewController" customModule="MathQuizGame" customModuleProvider="target">
             <connections>
                 <outlet property="headerLabel" destination="2Wd-62-44L" id="K9Y-U1-3Px"/>
                 <outlet property="tableView" destination="7gg-tv-AvI" id="arH-qT-gYM"/>

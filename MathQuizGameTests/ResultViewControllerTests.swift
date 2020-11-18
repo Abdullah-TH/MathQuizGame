@@ -1,5 +1,5 @@
 //
-//  ResultsViewControllerTests.swift
+//  ResultViewControllerTests.swift
 //  MathQuizGameTests
 //
 //  Created by Abdullah Althobetey on 19/10/2020.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import MathQuizGame
 
-class ResultsViewControllerTests: XCTestCase {
+class ResultViewControllerTests: XCTestCase {
 
     func test_viewDidLoad_rendersSummary() {
         let sut = makeSUT(summary: "a summary")
@@ -46,8 +46,8 @@ class ResultsViewControllerTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeSUT(summary: String = "", answers: [PresentableAnswer] = []) -> GameResultsViewController {
-        let sut = GameResultsViewController(summary: summary, answers: answers)
+    private func makeSUT(summary: String = "", answers: [PresentableAnswer] = []) -> GameResultViewController {
+        let sut = GameResultViewController(summary: summary, answers: answers)
         _ = sut.view
         return sut
     }

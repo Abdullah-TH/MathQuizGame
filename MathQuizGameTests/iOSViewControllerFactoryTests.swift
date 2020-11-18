@@ -63,7 +63,7 @@ class iOSViewControllerFactoryTests: XCTestCase {
         XCTAssertEqual(questionVC.options, [answerOne, answerTwo])
     }
     
-    func test_gameResultViewController_createResultsViewControllerWithSummaryAndAnswers() {
+    func test_gameResultViewController_createResultViewControllerWithSummaryAndAnswers() {
         let sut = makeSUT(
             questions: questions,
             options: options,
@@ -119,15 +119,15 @@ class iOSViewControllerFactoryTests: XCTestCase {
         userAnswers: [Question<String>: String],
         score: Int,
         factory: iOSViewControllerFactory
-    ) -> (GameResultsViewController, GameResultPresenter) {
+    ) -> (GameResultViewController, GameResultPresenter) {
         
-        let gameResults = GameResult(answers: userAnswers, score: score)
+        let gameResult = GameResult(answers: userAnswers, score: score)
         let presenter = GameResultPresenter(
             questions: questions,
-            gameResult: gameResults,
+            gameResult: gameResult,
             correctAnswers: correctAnswers
         )
-        let resultVC = factory.gameResultViewController(for: gameResults) as! GameResultsViewController
+        let resultVC = factory.gameResultViewController(for: gameResult) as! GameResultViewController
         return (resultVC, presenter)
     }
     
