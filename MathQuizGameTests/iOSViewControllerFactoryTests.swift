@@ -63,7 +63,7 @@ class iOSViewControllerFactoryTests: XCTestCase {
         XCTAssertEqual(questionVC.options, [answerOne, answerTwo])
     }
     
-    func test_gameResultViewController_createResultsViewControllerWithSummary() {
+    func test_gameResultViewController_createResultsViewControllerWithSummaryAndAnswers() {
         let sut = makeSUT(
             questions: questions,
             options: options,
@@ -77,6 +77,7 @@ class iOSViewControllerFactoryTests: XCTestCase {
         )
         
         XCTAssertEqual(resultVC.summary, resultPresenter.summary)
+        XCTAssertEqual(resultVC.answers.count, resultPresenter.presentableAnswers.count)
     }
     
     
