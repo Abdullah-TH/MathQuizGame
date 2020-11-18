@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import MathQuizGame
+import GameEngine
 
 class QuestionPresenterTests: XCTestCase {
     
