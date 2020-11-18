@@ -12,8 +12,8 @@ class GameResultsViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    private let summary: String
-    private let answers: [PresentableAnswer]
+    let summary: String
+    let answers: [PresentableAnswer]
     
     init(summary: String, answers: [PresentableAnswer]) {
         self.summary = summary

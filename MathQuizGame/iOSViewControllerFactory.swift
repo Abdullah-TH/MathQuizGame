@@ -12,10 +12,16 @@ final class iOSViewControllerFactory: ViewControllerFactory {
     
     private let questions: [Question<String>]
     private let options: [Question<String>: [String]]
+    private let correctAnswers: [Question<String> : String]
     
-    init(questions: [Question<String>], options: [Question<String>: [String]]) {
+    init(
+        questions: [Question<String>],
+        options: [Question<String>: [String]],
+        correctAnswers: [Question<String> : String]
+    ) {
         self.questions = questions
         self.options = options
+        self.correctAnswers = correctAnswers
     }
     
     func questionViewController(for question: Question<String>, answerCallback: @escaping (String) -> Void) -> UIViewController {
@@ -30,7 +36,17 @@ final class iOSViewControllerFactory: ViewControllerFactory {
     }
     
     func gameResultViewController(for result: GameResult<Question<String>, String>) -> UIViewController {
-        return UIViewController()
+        let presenter = GameResultPresenter(
+            questions: questions,
+            gameResult: result,
+            correctAnswers: correctAnswers)
+        
+        let gameResultVC = GameResultsViewController(
+            summary: presenter.summary,
+            answers: presenter.presentableAnswers
+        )
+        
+        return gameResultVC
     }
     
     
