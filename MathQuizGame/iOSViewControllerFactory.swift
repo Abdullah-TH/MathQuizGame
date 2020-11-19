@@ -9,6 +9,7 @@ import UIKit
 import MathQuizEngine
 import MathQuizPresentation
 import MathQuizRouter
+import MathQuizUI_iOS
 
 final class iOSViewControllerFactory: ViewControllerFactory {
     
@@ -45,7 +46,13 @@ final class iOSViewControllerFactory: ViewControllerFactory {
         
         let gameResultVC = GameResultViewController(
             summary: presenter.summary,
-            answers: presenter.presentableAnswers
+            answers: presenter.presentableAnswers.map {
+                Answer(
+                    question: $0.question,
+                    answer: $0.answer,
+                    wrongAnswer: $0.wrongAnswer
+                )
+            }
         )
         
         return gameResultVC

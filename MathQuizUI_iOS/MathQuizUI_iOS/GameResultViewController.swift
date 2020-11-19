@@ -6,17 +6,16 @@
 //
 
 import UIKit
-import MathQuizPresentation
 
-class GameResultViewController: UIViewController {
+public class GameResultViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     let summary: String
-    public let answers: [PresentableAnswer]
+    public let answers: [Answer]
     
-    init(summary: String, answers: [PresentableAnswer]) {
+    public init(summary: String, answers: [Answer]) {
         self.summary = summary
         self.answers = answers
         super.init(nibName: nil, bundle: nil)
@@ -26,7 +25,7 @@ class GameResultViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
@@ -40,23 +39,23 @@ class GameResultViewController: UIViewController {
 
 extension GameResultViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return answers.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let answer = answers[indexPath.row]
         return answer.wrongAnswer == nil ? correctAnswerCell(for: answer) : wrongAnswerCell(for: answer)
     }
     
-    private func correctAnswerCell(for answer: PresentableAnswer) -> UITableViewCell {
+    private func correctAnswerCell(for answer: Answer) -> UITableViewCell {
         let cell = tableView.dequeue(CorrectAnswerCell.self)!
         cell.questionLabel.text = answer.question
         cell.answerLabel.text = answer.answer
         return cell
     }
     
-    private func wrongAnswerCell(for answer: PresentableAnswer) -> UITableViewCell {
+    private func wrongAnswerCell(for answer: Answer) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WrongAnswerCell") as! WrongAnswerCell
         cell.questionLabel.text = answer.question
         cell.correctAnswerLabel.text = answer.answer
@@ -67,7 +66,7 @@ extension GameResultViewController: UITableViewDataSource {
 
 extension GameResultViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90 // just an estimation
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+public class QuestionViewController: UIViewController {
     
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +18,7 @@ class QuestionViewController: UIViewController {
     let options: [String]
     private var selection: (String) -> Void
     
-    init(
+    public init(
         question: String,
         options: [String],
         selection: @escaping (String) -> Void
@@ -33,7 +33,7 @@ class QuestionViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
@@ -44,11 +44,11 @@ class QuestionViewController: UIViewController {
 
 extension QuestionViewController: UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = options[indexPath.row]
         return cell
@@ -64,7 +64,7 @@ extension QuestionViewController: UITableViewDataSource {
 
 extension QuestionViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selection(options[indexPath.row])
     }
     

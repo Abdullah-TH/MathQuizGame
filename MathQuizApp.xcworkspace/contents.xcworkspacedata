@@ -11,6 +11,9 @@
       location = "group:MathQuizPresentation">
    </FileRef>
    <FileRef
+      location = "group:MathQuizUI_iOS/MathQuizUI_iOS.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "container:MathQuizGame.xcodeproj">
    </FileRef>
 </Workspace>
