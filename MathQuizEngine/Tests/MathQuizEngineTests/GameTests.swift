@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import GameEngine
+import MathQuizEngine
 
 class GameTests: XCTestCase {
     

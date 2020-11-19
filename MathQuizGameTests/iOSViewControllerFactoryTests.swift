@@ -7,7 +7,8 @@
 
 import XCTest
 @testable import MathQuizGame
-import GameEngine
+import MathQuizEngine
+import MathQuizPresentation
 
 class iOSViewControllerFactoryTests: XCTestCase {
     

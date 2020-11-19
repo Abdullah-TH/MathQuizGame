@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GameEngine
+import MathQuizEngine
 
 class RouterSpy: Router {
     

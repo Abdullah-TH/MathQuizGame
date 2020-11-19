@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import GameEngine
+import MathQuizEngine
+import MathQuizPresentation
 
 final class iOSViewControllerFactory: ViewControllerFactory {
     

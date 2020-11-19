@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MathQuizPresentation
 
 class GameResultViewController: UIViewController {
     
@@ -13,7 +14,7 @@ class GameResultViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let summary: String
-    let answers: [PresentableAnswer]
+    public let answers: [PresentableAnswer]
     
     init(summary: String, answers: [PresentableAnswer]) {
         self.summary = summary

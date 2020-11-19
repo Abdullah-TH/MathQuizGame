@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:GameEngine.xcodeproj">
+      location = "group:MathQuizEngine">
+   </FileRef>
+   <FileRef
+      location = "group:MathQuizPresentation">
    </FileRef>
    <FileRef
       location = "container:MathQuizGame.xcodeproj">

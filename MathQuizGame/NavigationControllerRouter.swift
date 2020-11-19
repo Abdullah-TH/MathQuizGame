@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import GameEngine
+import MathQuizEngine
 
 final class NavigationControllerRouter: Router {
     

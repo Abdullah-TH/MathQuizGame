@@ -6,19 +6,29 @@
 //
 
 import Foundation
-import GameEngine
+import MathQuizEngine
 
-struct GameResultPresenter {
+public struct GameResultPresenter {
     
-    let questions: [Question<String>]
-    let gameResult: GameResult<Question<String>, String>
-    let correctAnswers: [Question<String>: String]
+    private let questions: [Question<String>]
+    private let gameResult: GameResult<Question<String>, String>
+    private let correctAnswers: [Question<String>: String]
     
-    var summary: String {
+    public init(
+        questions: [Question<String>],
+        gameResult: GameResult<Question<String>, String>,
+        correctAnswers: [Question<String>: String]
+    ) {
+        self.questions = questions
+        self.gameResult = gameResult
+        self.correctAnswers = correctAnswers
+    }
+    
+    public var summary: String {
         "You got \(gameResult.score) of \(gameResult.answers.count) correct answers"
     }
     
-    var presentableAnswers: [PresentableAnswer] {
+    public var presentableAnswers: [PresentableAnswer] {
         questions.map { question in
             
             guard let userAnswer = gameResult.answers[question],

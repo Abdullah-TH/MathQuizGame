@@ -7,7 +7,7 @@
 
 import XCTest
 @testable import MathQuizGame
-import GameEngine
+import MathQuizEngine
 
 class NavigationControllerRouterTests: XCTestCase {
     

@@ -6,8 +6,8 @@
 //
 
 import XCTest
-@testable import MathQuizGame
-import GameEngine
+import MathQuizPresentation
+import MathQuizEngine
 
 class QuestionPresenterTests: XCTestCase {
     

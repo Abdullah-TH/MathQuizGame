@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import GameEngine
+import MathQuizEngine
 
 protocol ViewControllerFactory {
     
