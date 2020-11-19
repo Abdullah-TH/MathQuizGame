@@ -8,7 +8,7 @@
 import UIKit
 import MathQuizEngine
 
-protocol ViewControllerFactory {
+public protocol ViewControllerFactory {
     
     func questionViewController(
         for question: Question<String>,

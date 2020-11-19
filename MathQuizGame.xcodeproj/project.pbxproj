@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A338589254558B40097D639 /* NavigationControllerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A338588254558B40097D639 /* NavigationControllerRouterTests.swift */; };
-		6A33858D254559360097D639 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A33858C254559360097D639 /* NavigationControllerRouter.swift */; };
 		6A34886A253EDC96007386B4 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */; };
 		6A34886F253EE2AE007386B4 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */; };
 		6A348874253EE8F5007386B4 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A348873253EE8F5007386B4 /* UITableViewExtension.swift */; };
@@ -26,7 +24,7 @@
 		6A6DA6A2253D665A00C2027D /* GameResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A0253D665A00C2027D /* GameResultViewController.xib */; };
 		6A6DA6A7253D667100C2027D /* ResultViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */; };
 		6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */; };
-		6A866C092551ADC00048DD58 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */; };
+		6A8379B12566BD3900419AEB /* MathQuizRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 6A8379B02566BD3900419AEB /* MathQuizRouter */; };
 		6A866C0D2551AE430048DD58 /* iOSViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */; };
 		6A866C112551AF230048DD58 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */; };
 		6A89806D2566ABBB0010AB18 /* MathQuizEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 6A89806C2566ABBB0010AB18 /* MathQuizEngine */; };
@@ -51,8 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A338588254558B40097D639 /* NavigationControllerRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouterTests.swift; sourceTree = "<group>"; };
-		6A33858C254559360097D639 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
 		6A348869253EDC96007386B4 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		6A34886E253EE2AE007386B4 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
 		6A348873253EE8F5007386B4 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -76,7 +72,6 @@
 		6A6DA6A0253D665A00C2027D /* GameResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultViewController.xib; sourceTree = "<group>"; };
 		6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTests.swift; sourceTree = "<group>"; };
 		6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
-		6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactoryTests.swift; sourceTree = "<group>"; };
 		6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
 		6A98D3182544804400B24AA6 /* GameEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GameEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8379B12566BD3900419AEB /* MathQuizRouter in Frameworks */,
 				6A89806D2566ABBB0010AB18 /* MathQuizEngine in Frameworks */,
 				6A89806F2566ABBB0010AB18 /* MathQuizPresentation in Frameworks */,
 			);
@@ -147,8 +143,6 @@
 				6A348873253EE8F5007386B4 /* UITableViewExtension.swift */,
 				6A34887D253EE959007386B4 /* CorrectAnswerCell.swift */,
 				6A348882253EE96D007386B4 /* WrongAnswerCell.swift */,
-				6A33858C254559360097D639 /* NavigationControllerRouter.swift */,
-				6A866C082551ADC00048DD58 /* ViewControllerFactory.swift */,
 				6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */,
 			);
 			path = MathQuizGame;
@@ -160,7 +154,6 @@
 				6A6DA660253C1FFA00C2027D /* Info.plist */,
 				6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */,
 				6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */,
-				6A338588254558B40097D639 /* NavigationControllerRouterTests.swift */,
 				6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */,
 				6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */,
 			);
@@ -203,6 +196,7 @@
 			packageProductDependencies = (
 				6A89806C2566ABBB0010AB18 /* MathQuizEngine */,
 				6A89806E2566ABBB0010AB18 /* MathQuizPresentation */,
+				6A8379B02566BD3900419AEB /* MathQuizRouter */,
 			);
 			productName = MathQuizGame;
 			productReference = 6A6DA644253C1FF900C2027D /* MathQuizGame.app */;
@@ -328,10 +322,8 @@
 				6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */,
 				6A348883253EE96D007386B4 /* WrongAnswerCell.swift in Sources */,
 				6A866C112551AF230048DD58 /* iOSViewControllerFactory.swift in Sources */,
-				6A33858D254559360097D639 /* NavigationControllerRouter.swift in Sources */,
 				6A6DA695253C234A00C2027D /* QuestionViewController.swift in Sources */,
 				6A6DA6A1253D665A00C2027D /* GameResultViewController.swift in Sources */,
-				6A866C092551ADC00048DD58 /* ViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A338589254558B40097D639 /* NavigationControllerRouterTests.swift in Sources */,
 				6A6DA6A7253D667100C2027D /* ResultViewControllerTests.swift in Sources */,
 				6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */,
 				6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */,
@@ -665,6 +656,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A8379B02566BD3900419AEB /* MathQuizRouter */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MathQuizRouter;
+		};
 		6A89806C2566ABBB0010AB18 /* MathQuizEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MathQuizEngine;

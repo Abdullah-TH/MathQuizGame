@@ -8,6 +8,7 @@
 import UIKit
 import MathQuizEngine
 import MathQuizPresentation
+import MathQuizRouter
 
 final class iOSViewControllerFactory: ViewControllerFactory {
     

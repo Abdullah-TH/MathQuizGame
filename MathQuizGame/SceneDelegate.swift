@@ -8,6 +8,8 @@
 import UIKit
 import MathQuizEngine
 import MathQuizPresentation
+import MathQuizRouter
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
