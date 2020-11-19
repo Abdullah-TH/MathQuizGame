@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import GameEngine
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var game: Game<Question<String>, String, NavigationControllerRouter>?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -18,19 +19,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = GameResultViewController(summary: "You got 1/2", answers: [
-            PresentableAnswer(
-                question: "Long long long long long long long long long question question",
-                answer: "yes long",
-                wrongAnswer: nil
-            ),
-            PresentableAnswer(
-                question: "Hard question",
-                answer: "is it",
-                wrongAnswer: "yes it is"
-            )
-        ])
+        
+        let questionOne = Question(value: "1 + 1")
+        let questionTwo = Question(value: "2 * 3")
+        let questions = [questionOne, questionTwo]
+        let options = [
+            questionOne: ["1", "3", "2", "5"],
+            questionTwo: ["6", "3", "5", "7"]
+        ]
+        let correctAnswers = [
+            questionOne: "2",
+            questionTwo: "6"
+        ]
+        
+        let factory = iOSViewControllerFactory(questions: questions, options: options, correctAnswers: correctAnswers)
+        let navigationController = UINavigationController()
+        let navigationRouter = NavigationControllerRouter(navigationController, factory: factory)
+        game = Game(questions: questions, router: navigationRouter, correctAnswers: correctAnswers)
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        game?.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
