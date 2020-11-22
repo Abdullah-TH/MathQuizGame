@@ -7,7 +7,7 @@
 
 import XCTest
 @testable import MathQuizGame
-import MathQuizEngine
+import QuizEngine
 import MathQuizPresentation
 @testable import MathQuizUI_iOS
 
