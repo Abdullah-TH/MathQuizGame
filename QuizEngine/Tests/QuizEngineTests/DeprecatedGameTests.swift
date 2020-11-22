@@ -8,7 +8,8 @@
 import XCTest
 import QuizEngine
 
-class GameTests: XCTestCase {
+@available(*, deprecated)
+class DeprecatedGameTests: XCTestCase {
     
     func test_gameStart_withNoQuestions_doesNotRouteToQuestions() {
         let (game, router) = makeSUT(questions: [])
