@@ -8,6 +8,7 @@
 import XCTest
 @testable import MathQuizGame
 import MathQuizPresentation
+@testable import MathQuizUI_iOS
 
 class ResultViewControllerTests: XCTestCase {
 
@@ -48,6 +49,7 @@ class ResultViewControllerTests: XCTestCase {
     // MARK: - Helpers
     
     private func makeSUT(summary: String = "", answers: [PresentableAnswer] = []) -> GameResultViewController {
+        let answers = answers.map { Answer(question: $0.question, answer: $0.answer, wrongAnswer: $0.wrongAnswer) }
         let sut = GameResultViewController(summary: summary, answers: answers)
         _ = sut.view
         return sut

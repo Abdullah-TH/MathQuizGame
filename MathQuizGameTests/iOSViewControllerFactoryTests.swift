@@ -9,6 +9,7 @@ import XCTest
 @testable import MathQuizGame
 import MathQuizEngine
 import MathQuizPresentation
+@testable import MathQuizUI_iOS
 
 class iOSViewControllerFactoryTests: XCTestCase {
     

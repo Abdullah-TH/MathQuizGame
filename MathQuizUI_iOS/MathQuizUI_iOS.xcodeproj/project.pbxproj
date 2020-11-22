@@ -67,6 +67,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A286DB9256ABD5E00C947AB /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				6A8379DF2566C42700419AEB /* QuestionViewController.swift */,
+				6A8379DE2566C42700419AEB /* QuestionViewController.xib */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		6A286DBC256ABD7300C947AB /* Game Result */ = {
+			isa = PBXGroup;
+			children = (
+				6A8379E02566C42700419AEB /* GameResultViewController.swift */,
+				6A8379E22566C42700419AEB /* GameResultViewController.xib */,
+				6A286DBF256ABD8200C947AB /* Cells */,
+			);
+			path = "Game Result";
+			sourceTree = "<group>";
+		};
+		6A286DBF256ABD8200C947AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6A8379E12566C42700419AEB /* CorrectAnswerCell.xib */,
+				6A8379DD2566C42700419AEB /* WrongAnswerCell.xib */,
+				6A8379E42566C42700419AEB /* CorrectAnswerCell.swift */,
+				6A8379E52566C42700419AEB /* WrongAnswerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6A286DC2256ABD8900C947AB /* View Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6A8379E32566C42700419AEB /* UITableViewExtension.swift */,
+			);
+			path = "View Helpers";
+			sourceTree = "<group>";
+		};
+		6A286DC5256ABDDB00C947AB /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				6A837A1C2566C84000419AEB /* Answer.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		6A8379B52566C17600419AEB = {
 			isa = PBXGroup;
 			children = (
@@ -90,16 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				6A8379C32566C17600419AEB /* Info.plist */,
-				6A8379DF2566C42700419AEB /* QuestionViewController.swift */,
-				6A8379DE2566C42700419AEB /* QuestionViewController.xib */,
-				6A8379E02566C42700419AEB /* GameResultViewController.swift */,
-				6A8379E22566C42700419AEB /* GameResultViewController.xib */,
-				6A8379E12566C42700419AEB /* CorrectAnswerCell.xib */,
-				6A8379DD2566C42700419AEB /* WrongAnswerCell.xib */,
-				6A8379E32566C42700419AEB /* UITableViewExtension.swift */,
-				6A8379E42566C42700419AEB /* CorrectAnswerCell.swift */,
-				6A8379E52566C42700419AEB /* WrongAnswerCell.swift */,
-				6A837A1C2566C84000419AEB /* Answer.swift */,
+				6A286DC2256ABD8900C947AB /* View Helpers */,
+				6A286DB9256ABD5E00C947AB /* Question */,
+				6A286DBC256ABD7300C947AB /* Game Result */,
+				6A286DC5256ABDDB00C947AB /* View Models */,
 			);
 			path = MathQuizUI_iOS;
 			sourceTree = "<group>";
