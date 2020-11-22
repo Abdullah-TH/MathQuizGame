@@ -18,7 +18,7 @@ public class GameResultViewController: UIViewController {
     public init(summary: String, answers: [Answer]) {
         self.summary = summary
         self.answers = answers
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: Bundle(for: Self.self))
     }
     
     required init?(coder: NSCoder) {
@@ -30,8 +30,8 @@ public class GameResultViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(CorrectAnswerCell.self)
-        tableView.register(WrongAnswerCell.self)
+        tableView.register(CorrectAnswerCell.self, bundle: Bundle(for: Self.self))
+        tableView.register(WrongAnswerCell.self, bundle: Bundle(for: Self.self))
         headerLabel.text = summary
     }
 

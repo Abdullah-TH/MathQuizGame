@@ -9,9 +9,9 @@ import UIKit
 
 extension UITableView {
     
-    func register(_ type: UITableViewCell.Type) {
+    func register(_ type: UITableViewCell.Type, bundle: Bundle) {
         let className = String(describing: type)
-        register(UINib(nibName: className, bundle: nil), forCellReuseIdentifier: className)
+        register(UINib(nibName: className, bundle: bundle), forCellReuseIdentifier: className)
     }
     
     func dequeue<T>(_ type: T.Type) -> T? {

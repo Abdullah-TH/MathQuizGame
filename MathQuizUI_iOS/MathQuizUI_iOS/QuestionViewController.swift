@@ -26,7 +26,7 @@ public class QuestionViewController: UIViewController {
         self.question = question
         self.options = options
         self.selection = selection
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: nil, bundle: Bundle(for: Self.self))
     }
     
     required init?(coder: NSCoder) {
