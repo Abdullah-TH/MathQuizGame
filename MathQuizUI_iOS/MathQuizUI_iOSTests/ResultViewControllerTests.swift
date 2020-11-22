@@ -6,8 +6,6 @@
 //
 
 import XCTest
-@testable import MathQuizGame
-import MathQuizPresentation
 @testable import MathQuizUI_iOS
 
 class ResultViewControllerTests: XCTestCase {
