@@ -47,9 +47,7 @@ class ResultViewControllerTests: XCTestCase {
     
     
     // MARK: - Helpers
-    
-    private func makeSUT(summary: String = "", answers: [PresentableAnswer] = []) -> GameResultViewController {
-        let answers = answers.map { Answer(question: $0.question, answer: $0.answer, wrongAnswer: $0.wrongAnswer) }
+    private func makeSUT(summary: String = "", answers: [Answer] = []) -> GameResultViewController {
         let sut = GameResultViewController(summary: summary, answers: answers)
         _ = sut.view
         return sut
@@ -59,9 +57,9 @@ class ResultViewControllerTests: XCTestCase {
         question: String = "",
         answer: String = "",
         wrongAnswer: String? = nil
-    ) -> PresentableAnswer {
+    ) -> Answer {
         
-        return PresentableAnswer(
+        return Answer(
             question: question,
             answer: answer,
             wrongAnswer: wrongAnswer

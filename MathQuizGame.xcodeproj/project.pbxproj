@@ -12,9 +12,6 @@
 		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
 		6A6DA654253C1FFA00C2027D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA652253C1FFA00C2027D /* LaunchScreen.storyboard */; };
 		6A6DA66A253C1FFA00C2027D /* MathQuizGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */; };
-		6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */; };
-		6A6DA6A7253D667100C2027D /* ResultViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */; };
-		6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */; };
 		6A8379B12566BD3900419AEB /* MathQuizRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 6A8379B02566BD3900419AEB /* MathQuizRouter */; };
 		6A837A002566C46200419AEB /* MathQuizUI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8379FF2566C46200419AEB /* MathQuizUI_iOS.framework */; };
 		6A837A012566C46200419AEB /* MathQuizUI_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8379FF2566C46200419AEB /* MathQuizUI_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,9 +64,6 @@
 		6A6DA665253C1FFA00C2027D /* MathQuizGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathQuizGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DA669253C1FFA00C2027D /* MathQuizGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathQuizGameUITests.swift; sourceTree = "<group>"; };
 		6A6DA66B253C1FFA00C2027D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewControllerTests.swift; sourceTree = "<group>"; };
-		6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTests.swift; sourceTree = "<group>"; };
-		6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		6A8379FF2566C46200419AEB /* MathQuizUI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MathQuizUI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactoryTests.swift; sourceTree = "<group>"; };
 		6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -143,9 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				6A6DA660253C1FFA00C2027D /* Info.plist */,
-				6A6DA69A253C235E00C2027D /* QuestionViewControllerTests.swift */,
-				6A6DA6A6253D667100C2027D /* ResultViewControllerTests.swift */,
-				6A6DA6AE253D949900C2027D /* TableViewHelpers.swift */,
 				6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */,
 			);
 			path = MathQuizGameTests;
@@ -315,9 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6DA6A7253D667100C2027D /* ResultViewControllerTests.swift in Sources */,
-				6A6DA6AF253D949900C2027D /* TableViewHelpers.swift in Sources */,
-				6A6DA69B253C235E00C2027D /* QuestionViewControllerTests.swift in Sources */,
 				6A866C0D2551AE430048DD58 /* iOSViewControllerFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
