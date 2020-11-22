@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A286E04256AEB5100C947AB /* QuizEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 6A286E03256AEB5100C947AB /* QuizEngine */; };
 		6A6DA648253C1FFA00C2027D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA647253C1FFA00C2027D /* AppDelegate.swift */; };
 		6A6DA64A253C1FFA00C2027D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DA649253C1FFA00C2027D /* SceneDelegate.swift */; };
 		6A6DA651253C1FFA00C2027D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DA650253C1FFA00C2027D /* Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		6A837A012566C46200419AEB /* MathQuizUI_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A8379FF2566C46200419AEB /* MathQuizUI_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A866C0D2551AE430048DD58 /* iOSViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C0C2551AE430048DD58 /* iOSViewControllerFactoryTests.swift */; };
 		6A866C112551AF230048DD58 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A866C102551AF230048DD58 /* iOSViewControllerFactory.swift */; };
-		6A89806D2566ABBB0010AB18 /* MathQuizEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 6A89806C2566ABBB0010AB18 /* MathQuizEngine */; };
 		6A89806F2566ABBB0010AB18 /* MathQuizPresentation in Frameworks */ = {isa = PBXBuildFile; productRef = 6A89806E2566ABBB0010AB18 /* MathQuizPresentation */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A8379B12566BD3900419AEB /* MathQuizRouter in Frameworks */,
-				6A89806D2566ABBB0010AB18 /* MathQuizEngine in Frameworks */,
+				6A286E04256AEB5100C947AB /* QuizEngine in Frameworks */,
 				6A89806F2566ABBB0010AB18 /* MathQuizPresentation in Frameworks */,
 				6A837A002566C46200419AEB /* MathQuizUI_iOS.framework in Frameworks */,
 			);
@@ -178,9 +178,9 @@
 			);
 			name = MathQuizGame;
 			packageProductDependencies = (
-				6A89806C2566ABBB0010AB18 /* MathQuizEngine */,
 				6A89806E2566ABBB0010AB18 /* MathQuizPresentation */,
 				6A8379B02566BD3900419AEB /* MathQuizRouter */,
+				6A286E03256AEB5100C947AB /* QuizEngine */,
 			);
 			productName = MathQuizGame;
 			productReference = 6A6DA644253C1FF900C2027D /* MathQuizGame.app */;
@@ -628,13 +628,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A286E03256AEB5100C947AB /* QuizEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = QuizEngine;
+		};
 		6A8379B02566BD3900419AEB /* MathQuizRouter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = MathQuizRouter;
-		};
-		6A89806C2566ABBB0010AB18 /* MathQuizEngine */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = MathQuizEngine;
 		};
 		6A89806E2566ABBB0010AB18 /* MathQuizPresentation */ = {
 			isa = XCSwiftPackageProductDependency;

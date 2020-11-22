@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MathQuizRouter">
+      location = "group:QuizEngine">
    </FileRef>
    <FileRef
-      location = "group:MathQuizEngine">
+      location = "group:MathQuizRouter">
    </FileRef>
    <FileRef
       location = "group:MathQuizPresentation">

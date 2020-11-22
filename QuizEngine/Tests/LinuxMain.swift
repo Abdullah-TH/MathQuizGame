@@ -3,5 +3,5 @@ import XCTest
 import MathQuiz_EngineTests
 
 var tests = [XCTestCaseEntry]()
-tests += MathQuizEngineTests.allTests()
+tests += QuizEngineTests.allTests()
 XCTMain(tests)

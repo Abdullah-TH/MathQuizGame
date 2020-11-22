@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import MathQuizEngine
+import QuizEngine
 
 public struct QuestionPresenter {
     

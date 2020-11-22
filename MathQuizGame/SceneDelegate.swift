@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MathQuizEngine
+import QuizEngine
 import MathQuizPresentation
 import MathQuizRouter
 

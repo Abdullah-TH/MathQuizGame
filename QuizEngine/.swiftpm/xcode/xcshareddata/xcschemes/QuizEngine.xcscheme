@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1210"
+   LastUpgradeVersion = "1220"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MathQuizEngine"
-               BuildableName = "MathQuizEngine"
-               BlueprintName = "MathQuizEngine"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MathQuizEngineTests"
-               BuildableName = "MathQuizEngineTests"
-               BlueprintName = "MathQuizEngineTests"
+               BlueprintIdentifier = "QuizEngine"
+               BuildableName = "QuizEngine"
+               BlueprintName = "QuizEngine"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "MathQuizEngineTests"
-               BuildableName = "MathQuizEngineTests"
-               BlueprintName = "MathQuizEngineTests"
+               BlueprintIdentifier = "QuizEngineTests"
+               BuildableName = "QuizEngineTests"
+               BlueprintName = "QuizEngineTests"
                ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
@@ -74,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "MathQuizEngine"
-            BuildableName = "MathQuizEngine"
-            BlueprintName = "MathQuizEngine"
+            BlueprintIdentifier = "QuizEngine"
+            BuildableName = "QuizEngine"
+            BlueprintName = "QuizEngine"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

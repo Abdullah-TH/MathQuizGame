@@ -7,7 +7,7 @@
 
 import XCTest
 import MathQuizPresentation
-import MathQuizEngine
+import QuizEngine
 
 class GameResultPresenterTests: XCTestCase {
     
