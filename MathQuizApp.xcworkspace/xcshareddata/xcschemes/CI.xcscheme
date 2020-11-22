@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1210"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizEngineTests"
+               BuildableName = "MathQuizEngineTests"
+               BlueprintName = "MathQuizEngineTests"
+               ReferencedContainer = "container:MathQuizEngine">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A6DA659253C1FFA00C2027D"
+               BuildableName = "MathQuizGameTests.xctest"
+               BlueprintName = "MathQuizGameTests"
+               ReferencedContainer = "container:MathQuizGame.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizPresentationTests"
+               BuildableName = "MathQuizPresentationTests"
+               BlueprintName = "MathQuizPresentationTests"
+               ReferencedContainer = "container:MathQuizPresentation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizRouterTests"
+               BuildableName = "MathQuizRouterTests"
+               BlueprintName = "MathQuizRouterTests"
+               ReferencedContainer = "container:MathQuizRouter">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A8379C72566C17600419AEB"
+               BuildableName = "MathQuizUI_iOSTests.xctest"
+               BlueprintName = "MathQuizUI_iOSTests"
+               ReferencedContainer = "container:MathQuizUI_iOS/MathQuizUI_iOS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizEngine"
+               BuildableName = "MathQuizEngine"
+               BlueprintName = "MathQuizEngine"
+               ReferencedContainer = "container:MathQuizEngine">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A6DA643253C1FF900C2027D"
+               BuildableName = "MathQuizGame.app"
+               BlueprintName = "MathQuizGame"
+               ReferencedContainer = "container:MathQuizGame.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizPresentation"
+               BuildableName = "MathQuizPresentation"
+               BlueprintName = "MathQuizPresentation"
+               ReferencedContainer = "container:MathQuizPresentation">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizRouter"
+               BuildableName = "MathQuizRouter"
+               BlueprintName = "MathQuizRouter"
+               ReferencedContainer = "container:MathQuizRouter">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A8379BE2566C17600419AEB"
+               BuildableName = "MathQuizUI_iOS.framework"
+               BlueprintName = "MathQuizUI_iOS"
+               ReferencedContainer = "container:MathQuizUI_iOS/MathQuizUI_iOS.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizEngineTests"
+               BuildableName = "MathQuizEngineTests"
+               BlueprintName = "MathQuizEngineTests"
+               ReferencedContainer = "container:MathQuizEngine">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A6DA659253C1FFA00C2027D"
+               BuildableName = "MathQuizGameTests.xctest"
+               BlueprintName = "MathQuizGameTests"
+               ReferencedContainer = "container:MathQuizGame.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizPresentationTests"
+               BuildableName = "MathQuizPresentationTests"
+               BlueprintName = "MathQuizPresentationTests"
+               ReferencedContainer = "container:MathQuizPresentation">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "MathQuizRouterTests"
+               BuildableName = "MathQuizRouterTests"
+               BlueprintName = "MathQuizRouterTests"
+               ReferencedContainer = "container:MathQuizRouter">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A8379C72566C17600419AEB"
+               BuildableName = "MathQuizUI_iOSTests.xctest"
+               BlueprintName = "MathQuizUI_iOSTests"
+               ReferencedContainer = "container:MathQuizUI_iOS/MathQuizUI_iOS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "MathQuizEngineTests"
+            BuildableName = "MathQuizEngineTests"
+            BlueprintName = "MathQuizEngineTests"
+            ReferencedContainer = "container:MathQuizEngine">
+         </BuildableReference>
+      </MacroExpansion>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
