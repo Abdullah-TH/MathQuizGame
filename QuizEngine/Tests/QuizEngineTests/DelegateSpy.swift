@@ -10,17 +10,17 @@ import QuizEngine
 
 class DelegateSpy: Router, QuizDelegate {
     
-    var routedQuestions: [String] = []
-    var routedResult: GameResult<String, String>? = nil
+    var handledQuestions: [String] = []
+    var handledResult: GameResult<String, String>? = nil
     var answerCallback: (String) -> Void = { _ in }
     
     func handle(question: String, answerCallback: @escaping (String) -> Void) {
-        routedQuestions.append(question)
+        handledQuestions.append(question)
         self.answerCallback = answerCallback
     }
     
     func handle(result: GameResult<String, String>) {
-        routedResult = result
+        handledResult = result
     }
     
     func route(to question: String, answerCallback: @escaping (String) -> Void) {
