@@ -34,11 +34,11 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
     
     private func nextAnswerCallback(from question: Question) -> (Answer) -> Void {
         return { [weak self] answer in
-            self?.routeNext(question: question, answer: answer)
+            self?.nextDelegateHandling(for: question, answer: answer)
         }
     }
     
-    private func routeNext(question: Question, answer: Answer) {
+    private func nextDelegateHandling(for question: Question, answer: Answer) {
         answers[question] = answer
         if let currentQuestionIndex = questions.firstIndex(of: question) {
             let nextQuestionIndex = currentQuestionIndex + 1
