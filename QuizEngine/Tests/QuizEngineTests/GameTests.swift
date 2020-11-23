@@ -148,7 +148,7 @@ class GameTests: XCTestCase {
     private func makeSUT(
         questions: [String],
         correctAnswers: [String: String] = [:]
-    ) -> (Quiz<String, String, DelegateSpy>, DelegateSpy) {
+    ) -> (Quiz<DelegateSpy>, DelegateSpy) {
         
         let delegate = DelegateSpy()
         let game = Quiz(

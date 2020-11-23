@@ -7,14 +7,14 @@
 
 import Foundation
 
-public class Quiz<Question, Answer: Equatable, Delegate: QuizDelegate> where Delegate.Question == Question, Delegate.Answer == Answer {
+public class Quiz<Delegate: QuizDelegate> where Delegate.Answer: Equatable {
     
-    let flow: Flow<Question, Answer, Delegate>
+    let flow: Flow<Delegate.Question, Delegate.Answer, Delegate>
     
     public init(
-        questions: [Question],
+        questions: [Delegate.Question],
         delegate: Delegate,
-        correctAnswers: [Question: Answer]
+        correctAnswers: [Delegate.Question: Delegate.Answer]
     ) {
         flow = Flow(questions: questions, delegate: delegate, scoring: { answers in
             scoring(answers: answers, correctAnswers: correctAnswers)
