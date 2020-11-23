@@ -8,18 +8,26 @@
 import Foundation
 import QuizEngine
 
-class DelegateSpy: Router {
+class DelegateSpy: Router, QuizDelegate {
     
     var routedQuestions: [String] = []
     var routedResult: GameResult<String, String>? = nil
     var answerCallback: (String) -> Void = { _ in }
     
-    func route(to question: String, answerCallback: @escaping (String) -> Void) {
+    func handle(question: String, answerCallback: @escaping (String) -> Void) {
         routedQuestions.append(question)
         self.answerCallback = answerCallback
     }
     
-    func route(to result: GameResult<String, String>) {
+    func handle(result: GameResult<String, String>) {
         routedResult = result
+    }
+    
+    func route(to question: String, answerCallback: @escaping (String) -> Void) {
+        handle(question: question, answerCallback: answerCallback)
+    }
+    
+    func route(to result: GameResult<String, String>) {
+        handle(result: result)
     }
 }

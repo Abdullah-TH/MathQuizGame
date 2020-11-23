@@ -11,8 +11,8 @@ public protocol QuizDelegate {
     associatedtype Question: Hashable
     associatedtype Answer
     
-    func route(to question: Question, answerCallback: @escaping (Answer) -> Void)
-    func route(to result: GameResult<Question, Answer>)
+    func handle(question: Question, answerCallback: @escaping (Answer) -> Void)
+    func handle(result: GameResult<Question, Answer>)
 }
 
 @available(*, deprecated)
