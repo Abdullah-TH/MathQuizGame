@@ -1,5 +1,5 @@
 //
-//  Game.swift
+//  Quiz.swift
 //  GameEngine
 //
 //  Created by Abdullah Althobetey on 21/10/2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Game<Question, Answer: Equatable, Delegate: QuizDelegate> where Delegate.Question == Question, Delegate.Answer == Answer {
+public class Quiz<Question, Answer: Equatable, Delegate: QuizDelegate> where Delegate.Question == Question, Delegate.Answer == Answer {
     
     let flow: Flow<Question, Answer, Delegate>
     

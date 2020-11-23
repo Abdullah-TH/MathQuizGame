@@ -148,10 +148,10 @@ class GameTests: XCTestCase {
     private func makeSUT(
         questions: [String],
         correctAnswers: [String: String] = [:]
-    ) -> (Game<String, String, DelegateSpy>, DelegateSpy) {
+    ) -> (Quiz<String, String, DelegateSpy>, DelegateSpy) {
         
         let delegate = DelegateSpy()
-        let game = Game(
+        let game = Quiz(
             questions: questions,
             delegate: delegate,
             correctAnswers: correctAnswers
