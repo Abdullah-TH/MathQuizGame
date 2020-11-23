@@ -1,5 +1,5 @@
 //
-//  RouterSpy.swift
+//  DelegateSpy.swift
 //  GameEngineTests
 //
 //  Created by Abdullah Althobetey on 21/10/2020.
@@ -8,7 +8,7 @@
 import Foundation
 import QuizEngine
 
-class RouterSpy: Router {
+class DelegateSpy: Router {
     
     var routedQuestions: [String] = []
     var routedResult: GameResult<String, String>? = nil

@@ -148,15 +148,15 @@ class DeprecatedGameTests: XCTestCase {
     private func makeSUT(
         questions: [String],
         correctAnswers: [String: String] = [:]
-    ) -> (Game<String, String, RouterSpy>, RouterSpy) {
+    ) -> (Game<String, String, DelegateSpy>, DelegateSpy) {
         
-        let router = RouterSpy()
+        let delegate = DelegateSpy()
         let game = Game(
             questions: questions,
-            router: router,
+            router: delegate,
             correctAnswers: correctAnswers
         )
-        return (game, router)
+        return (game, delegate)
     }
 
 }
