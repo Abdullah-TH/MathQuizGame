@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(*, deprecated)
 public class Game<Question, Answer: Equatable, Delegate: QuizDelegate> where Delegate.Question == Question, Delegate.Answer == Answer {
     
     let flow: Flow<Question, Answer, Delegate>

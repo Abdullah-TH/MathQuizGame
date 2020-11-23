@@ -8,8 +8,8 @@
 import XCTest
 import QuizEngine
 
-@available(*, deprecated)
-class DeprecatedGameTests: XCTestCase {
+
+class GameTests: XCTestCase {
     
     func test_gameStart_withNoQuestions_doesNotDelegateQuestionsHandling() {
         let (game, delegate) = makeSUT(questions: [])
