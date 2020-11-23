@@ -153,7 +153,7 @@ class DeprecatedGameTests: XCTestCase {
         let delegate = DelegateSpy()
         let game = Game(
             questions: questions,
-            router: delegate,
+            delegate: delegate,
             correctAnswers: correctAnswers
         )
         return (game, delegate)

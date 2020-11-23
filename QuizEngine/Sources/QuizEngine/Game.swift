@@ -8,16 +8,16 @@
 import Foundation
 
 @available(*, deprecated)
-public class Game<Question, Answer: Equatable, R: Router> where R.Question == Question, R.Answer == Answer {
+public class Game<Question, Answer: Equatable, Delegate: QuizDelegate> where Delegate.Question == Question, Delegate.Answer == Answer {
     
-    let flow: Flow<Question, Answer, R>
+    let flow: Flow<Question, Answer, Delegate>
     
     public init(
         questions: [Question],
-        router: R,
+        delegate: Delegate,
         correctAnswers: [Question: Answer]
     ) {
-        flow = Flow(questions: questions, router: router, scoring: { answers in
+        flow = Flow(questions: questions, delegate: delegate, scoring: { answers in
             scoring(answers: answers, correctAnswers: correctAnswers)
         })
     }

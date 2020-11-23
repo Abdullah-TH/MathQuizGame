@@ -8,7 +8,7 @@
 import Foundation
 import QuizEngine
 
-class DelegateSpy: Router, QuizDelegate {
+class DelegateSpy: QuizDelegate {
     
     var handledQuestions: [String] = []
     var handledResult: GameResult<String, String>? = nil
@@ -21,13 +21,5 @@ class DelegateSpy: Router, QuizDelegate {
     
     func handle(result: GameResult<String, String>) {
         handledResult = result
-    }
-    
-    func route(to question: String, answerCallback: @escaping (String) -> Void) {
-        handle(question: question, answerCallback: answerCallback)
-    }
-    
-    func route(to result: GameResult<String, String>) {
-        handle(result: result)
     }
 }
