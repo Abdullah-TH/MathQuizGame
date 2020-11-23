@@ -11,136 +11,136 @@ import QuizEngine
 @available(*, deprecated)
 class DeprecatedGameTests: XCTestCase {
     
-    func test_gameStart_withNoQuestions_doesNotRouteToQuestions() {
-        let (game, router) = makeSUT(questions: [])
+    func test_gameStart_withNoQuestions_doesNotDelegateQuestionsHandling() {
+        let (game, delegate) = makeSUT(questions: [])
         
         game.start()
         
-        XCTAssertTrue(router.handledQuestions.isEmpty)
+        XCTAssertTrue(delegate.handledQuestions.isEmpty)
     }
     
-    func test_game_withQuestionsButNotStarted_doesNotRouteToQuestionsOrResult() {
-        let (_, router) = makeSUT(questions: ["Q1"])
+    func test_game_withQuestionsButNotStarted_doesNotDelegateQuestionsOrResultHandling() {
+        let (_, delegate) = makeSUT(questions: ["Q1"])
         
-        XCTAssertTrue(router.handledQuestions.isEmpty)
-        XCTAssertNil(router.handledResult)
+        XCTAssertTrue(delegate.handledQuestions.isEmpty)
+        XCTAssertNil(delegate.handledResult)
     }
     
-    func test_gameStart_withOneQuestion_routeToCorrectQuestion() {
-        let (game, router) = makeSUT(questions: ["Q1"])
+    func test_gameStart_withOneQuestion_delegatesQuestionForHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q1"])
         
         game.start()
         
-        XCTAssertEqual(router.handledQuestions, ["Q1"])
+        XCTAssertEqual(delegate.handledQuestions, ["Q1"])
     }
     
-    func test_gameStart_withOneQuestion_routeToCorrectQuestion_2() {
-        let (game, router) = makeSUT(questions: ["Q2"])
+    func test_gameStart_withOneQuestion_delegatesAnotherQuestionForHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q2"])
         
         game.start()
         
-        XCTAssertEqual(router.handledQuestions, ["Q2"])
+        XCTAssertEqual(delegate.handledQuestions, ["Q2"])
     }
     
-    func test_gameStart_withTwoQuestions_routeToFirstQuestion() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"])
+    func test_gameStart_withTwoQuestions_delegatesFirstQuestionHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         game.start()
         
-        XCTAssertEqual(router.handledQuestions, ["Q1"])
+        XCTAssertEqual(delegate.handledQuestions, ["Q1"])
     }
     
-    func test_gameStart_withTwoQuestionsTwice_routeToFirstQuestionTwice() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"])
+    func test_gameStart_withTwoQuestionsTwice_delegatesFirstQuestionHandlingTwice() {
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         game.start()
         game.start()
         
-        XCTAssertEqual(router.handledQuestions, ["Q1", "Q1"])
+        XCTAssertEqual(delegate.handledQuestions, ["Q1", "Q1"])
     }
     
-    func test_gameStartAndAnswerFirstAndSecondQuestion_withThreeQuestions_routeToSecondAndThirdQuestions() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2", "Q3"])
+    func test_gameStartAndAnswerFirstAndSecondQuestion_withThreeQuestions_delegatesAllQuestionsForHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
         
         game.start()
-        router.answerCallback("A1")
-        router.answerCallback("A2")
+        delegate.answerCallback("A1")
+        delegate.answerCallback("A2")
         
-        XCTAssertEqual(router.handledQuestions, ["Q1", "Q2", "Q3"])
+        XCTAssertEqual(delegate.handledQuestions, ["Q1", "Q2", "Q3"])
     }
     
-    func test_gameStartAndAnswerFirstQuestion_withOneQuestions_doesNotRouteToAnotherQuestion() {
-        let (game, router) = makeSUT(questions: ["Q1"])
+    func test_gameStartAndAnswerFirstQuestion_withOneQuestions_doesDelegatesMoreQuestions() {
+        let (game, delegate) = makeSUT(questions: ["Q1"])
         
         game.start()
-        router.answerCallback("A1")
+        delegate.answerCallback("A1")
         
-        XCTAssertEqual(router.handledQuestions, ["Q1"])
+        XCTAssertEqual(delegate.handledQuestions, ["Q1"])
     }
     
-    func test_gameStart_withNoQuestions_routeToResult() {
-        let (game, router) = makeSUT(questions: [])
+    func test_gameStart_withNoQuestions_delegatesResultHandling() {
+        let (game, delegate) = makeSUT(questions: [])
         
         game.start()
         
-        XCTAssertEqual(router.handledResult!.answers, [:])
+        XCTAssertEqual(delegate.handledResult!.answers, [:])
     }
     
-    func test_gameStartWithNoAnswer_withOneQuestions_doesNotRouteToResult() {
-        let (game, router) = makeSUT(questions: ["Q1"])
+    func test_gameStartWithNoAnswer_withOneQuestions_doesNotDelegatesResultHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q1"])
         
         game.start()
         
-        XCTAssertNil(router.handledResult)
+        XCTAssertNil(delegate.handledResult)
     }
     
-    func test_gameStartAndAnswerFirstQuestion_withTwoQuestions_doesNotRouteToResult() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"])
+    func test_gameStartAndAnswerFirstQuestion_withTwoQuestions_doesNotDelegatesResultHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         game.start()
-        router.answerCallback("A1")
+        delegate.answerCallback("A1")
         
-        XCTAssertNil(router.handledResult)
+        XCTAssertNil(delegate.handledResult)
     }
     
-    func test_gameStartAndAnswerFirstAndSecondQuestions_withTwoQuestions_routeToResult() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"])
+    func test_gameStartAndAnswerFirstAndSecondQuestions_withTwoQuestions_delegatesResultHandling() {
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         game.start()
-        router.answerCallback("A1")
-        router.answerCallback("A2")
+        delegate.answerCallback("A1")
+        delegate.answerCallback("A2")
         
-        XCTAssertEqual(router.handledResult!.answers, ["Q1": "A1", "Q2": "A2"])
+        XCTAssertEqual(delegate.handledResult!.answers, ["Q1": "A1", "Q2": "A2"])
     }
 
     func test_startGame_answerZeroOutOfTwoCorrectly_scoresZero() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
         
         game.start()
-        router.answerCallback("wrong")
-        router.answerCallback("wrong")
+        delegate.answerCallback("wrong")
+        delegate.answerCallback("wrong")
         
-        XCTAssertEqual(router.handledResult!.score, 0)
+        XCTAssertEqual(delegate.handledResult!.score, 0)
     }
 
     func test_startGame_answerOneOutOfTwoCorrectly_scoresOne() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
         
         game.start()
-        router.answerCallback("A1")
-        router.answerCallback("wrong")
+        delegate.answerCallback("A1")
+        delegate.answerCallback("wrong")
 
-        XCTAssertEqual(router.handledResult!.score, 1)
+        XCTAssertEqual(delegate.handledResult!.score, 1)
     }
 
     func test_startGame_answerTwoOutOfTwoCorrectly_scoresTwo() {
-        let (game, router) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
+        let (game, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
         
         game.start()
-        router.answerCallback("A1")
-        router.answerCallback("A2")
+        delegate.answerCallback("A1")
+        delegate.answerCallback("A2")
 
-        XCTAssertEqual(router.handledResult!.score, 2)
+        XCTAssertEqual(delegate.handledResult!.score, 2)
     }
     
     // MARK: - Helpers
