@@ -1,6 +1,6 @@
 //
 //  QuizDelegate.swift
-//  GameEngine
+//  QuizEngine
 //
 //  Created by Abdullah Althobetey on 21/10/2020.
 //

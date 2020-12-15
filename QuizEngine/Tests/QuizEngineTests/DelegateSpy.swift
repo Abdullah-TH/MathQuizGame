@@ -1,6 +1,6 @@
 //
 //  DelegateSpy.swift
-//  GameEngineTests
+//  QuizEngineTests
 //
 //  Created by Abdullah Althobetey on 21/10/2020.
 //
