@@ -26,8 +26,8 @@ class NavigationControllerRouterTests: XCTestCase {
         factory.stub(question: questionOne, with: viewController)
         factory.stub(question: questionTwo, with: secondViewController)
         
-        sut.route(to: questionOne, answerCallback: { _ in })
-        sut.route(to: questionTwo, answerCallback: { _ in })
+        sut.handle(question: questionOne, answerCallback: { _ in })
+        sut.handle(question: questionTwo, answerCallback: { _ in })
         
         XCTAssertEqual(navigationController.viewControllers.count, 2)
         XCTAssertEqual(navigationController.viewControllers.first, viewController)
@@ -38,7 +38,7 @@ class NavigationControllerRouterTests: XCTestCase {
         factory.stub(question: questionOne, with: UIViewController())
         
         var answerCallbackWasFired = false
-        sut.route(to: questionOne, answerCallback: { _ in answerCallbackWasFired = true })
+        sut.handle(question: questionOne, answerCallback: { _ in answerCallbackWasFired = true })
         factory.answerCallbacks[questionOne]!("anything")
         
         XCTAssertTrue(answerCallbackWasFired)
