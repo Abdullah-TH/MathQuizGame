@@ -11,7 +11,6 @@ import QuizEngine
 class DelegateSpy: QuizDelegate {
     
     var questionsAsked: [String] = []
-    var handledResult: GameResult<String, String>? = nil
     var completedQuizzes: [[(String, String)]] = []
     var answerCompletion: (String) -> Void = { _ in }
     
@@ -22,9 +21,5 @@ class DelegateSpy: QuizDelegate {
     
     func didCompleteQuiz(with answers: [(question: String, answer: String)]) {
         completedQuizzes.append(answers)
-    }
-    
-    func handle(result: GameResult<String, String>) {
-        handledResult = result
     }
 }

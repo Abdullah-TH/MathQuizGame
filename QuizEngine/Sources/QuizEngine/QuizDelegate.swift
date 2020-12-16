@@ -13,12 +13,4 @@ public protocol QuizDelegate {
     
     func answer(for question: Question, completion: @escaping (Answer) -> Void)
     func didCompleteQuiz(with answers: [(question: Question, answer: Answer)])
-    
-    @available(*, deprecated, message: "use didCompleteQuiz(with:_) instead")
-    func handle(result: GameResult<Question, Answer>)
-}
-
-#warning("Remove this when migrating to the new method")
-public extension QuizDelegate {
-    func didCompleteQuiz(with answers: [(question: Question, answer: Answer)]) {}
 }

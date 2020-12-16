@@ -16,9 +16,7 @@ public class Quiz<Delegate: QuizDelegate> where Delegate.Answer: Equatable {
         delegate: Delegate,
         correctAnswers: [Delegate.Question: Delegate.Answer]
     ) {
-        flow = Flow(questions: questions, delegate: delegate, scoring: { answers in
-            scoring(answers: answers, correctAnswers: correctAnswers)
-        })
+        flow = Flow(questions: questions, delegate: delegate)
     }
     
     public func start() {
@@ -26,6 +24,7 @@ public class Quiz<Delegate: QuizDelegate> where Delegate.Answer: Equatable {
     }
 }
 
+@available(*, deprecated)
 private func scoring<Question, Answer: Equatable>(
     answers: [Question: Answer],
     correctAnswers: [Question: Answer]
