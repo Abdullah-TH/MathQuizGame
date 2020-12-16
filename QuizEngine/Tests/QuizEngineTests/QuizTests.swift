@@ -11,19 +11,19 @@ import QuizEngine
 
 class QuizTests: XCTestCase {
     
+    func test_quiz_withQuestionsButNotStarted_doesNotCompleteQuiz() {
+        let (_, delegate) = makeSUT(questions: ["Q1"])
+        
+        XCTAssertTrue(delegate.handledQuestions.isEmpty)
+        XCTAssertTrue(delegate.completedQuizzes.isEmpty)
+    }
+    
     func test_start_withNoQuestions_doesNotDelegateQuestionsHandling() {
         let (quiz, delegate) = makeSUT(questions: [])
         
         quiz.start()
         
         XCTAssertTrue(delegate.handledQuestions.isEmpty)
-    }
-    
-    func test_quiz_withQuestionsButNotStarted_doesNotDelegateQuestionsOrResultHandling() {
-        let (_, delegate) = makeSUT(questions: ["Q1"])
-        
-        XCTAssertTrue(delegate.handledQuestions.isEmpty)
-        XCTAssertNil(delegate.handledResult)
     }
     
     func test_start_withOneQuestion_delegatesQuestionForHandling() {
