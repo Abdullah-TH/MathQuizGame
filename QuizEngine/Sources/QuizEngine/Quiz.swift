@@ -19,19 +19,3 @@ public class Quiz<Delegate: QuizDelegate> where Delegate.Answer: Equatable {
         flow.start()
     }
 }
-
-@available(*, deprecated)
-private func scoring<Question, Answer: Equatable>(
-    answers: [Question: Answer],
-    correctAnswers: [Question: Answer]
-) -> Int {
-    
-    var score = 0
-    for (question, answer) in answers {
-        if answer == correctAnswers[question] {
-            score += 1
-        }
-    }
-    
-    return score
-}
