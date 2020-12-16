@@ -12,6 +12,7 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
     private let delegate: Delegate
     private let questions: [Question]
     private var answers: [Question: Answer] = [:]
+    private var answersNew: [(Question, Answer)] = []
     private let scoring: ([Question: Answer]) -> Int
     
     init(
@@ -33,7 +34,7 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
             let question = questions[index]
             delegate.answer(for: question, completion: answer(for: question, at: index))
         } else {
-            delegate.didCompleteQuiz(with: [])
+            delegate.didCompleteQuiz(with: answersNew)
             delegate.handle(result: gameResult())
         }
     }
@@ -41,6 +42,7 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
     private func answer(for question: Question, at index: Int) -> (Answer) -> Void {
         return { [weak self] answer in
             self?.answers[question] = answer
+            self?.answersNew.append((question, answer))
             self?.delegateQuestionHandling(after: index)
         }
     }
