@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Question<T: Hashable>: Hashable {
+public struct Question<T> {
     
     public let value: T
     
