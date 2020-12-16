@@ -11,11 +11,7 @@ public class Quiz<Delegate: QuizDelegate> where Delegate.Answer: Equatable {
     
     let flow: Flow<Delegate.Question, Delegate.Answer, Delegate>
     
-    public init(
-        questions: [Delegate.Question],
-        delegate: Delegate,
-        correctAnswers: [Delegate.Question: Delegate.Answer]
-    ) {
+    public init(questions: [Delegate.Question], delegate: Delegate) {
         flow = Flow(questions: questions, delegate: delegate)
     }
     

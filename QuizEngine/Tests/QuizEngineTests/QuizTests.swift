@@ -59,11 +59,7 @@ class QuizTests: XCTestCase {
     ) -> (Quiz<DelegateSpy>, DelegateSpy) {
         
         let delegate = DelegateSpy()
-        let quiz = Quiz(
-            questions: questions,
-            delegate: delegate,
-            correctAnswers: correctAnswers
-        )
+        let quiz = Quiz(questions: questions, delegate: delegate)
         return (quiz, delegate)
     }
     
