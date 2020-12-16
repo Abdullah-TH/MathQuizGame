@@ -18,8 +18,8 @@ public final class NavigationControllerRouter: QuizDelegate {
         self.factory = factory
     }
     
-    public func handle(question: Question<String>, answerCallback: @escaping (String) -> Void) {
-        let viewController = factory.questionViewController(for: question, answerCallback: answerCallback)
+    public func answer(for question: Question<String>, completion: @escaping (String) -> Void) {
+        let viewController = factory.questionViewController(for: question, answerCallback: completion)
         navigationController.pushViewController(viewController, animated: true)
     }
     

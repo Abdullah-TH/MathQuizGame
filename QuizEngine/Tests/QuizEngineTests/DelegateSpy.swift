@@ -12,11 +12,11 @@ class DelegateSpy: QuizDelegate {
     
     var handledQuestions: [String] = []
     var handledResult: GameResult<String, String>? = nil
-    var answerCallback: (String) -> Void = { _ in }
+    var answerCompletion: (String) -> Void = { _ in }
     
-    func handle(question: String, answerCallback: @escaping (String) -> Void) {
+    func answer(for question: String, completion: @escaping (String) -> Void) {
         handledQuestions.append(question)
-        self.answerCallback = answerCallback
+        self.answerCompletion = completion
     }
     
     func handle(result: GameResult<String, String>) {

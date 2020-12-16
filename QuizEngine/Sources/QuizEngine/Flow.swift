@@ -31,14 +31,10 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
     private func delegateQuestionHandling(at index: Int) {
         if index < questions.endIndex {
             let question = questions[index]
-            delegate.handle(question: question, answerCallback: callback(for: question, at: index))
+            delegate.answer(for: question, completion: callback(for: question, at: index))
         } else {
             delegate.handle(result: gameResult())
         }
-    }
-    
-    private func delegateQuestionHandling(after index: Int) {
-        delegateQuestionHandling(at: questions.index(after: index))
     }
     
     private func callback(for question: Question, at index: Int) -> (Answer) -> Void {
@@ -46,6 +42,10 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
             self?.answers[question] = answer
             self?.delegateQuestionHandling(after: index)
         }
+    }
+    
+    private func delegateQuestionHandling(after index: Int) {
+        delegateQuestionHandling(at: questions.index(after: index))
     }
     
     private func gameResult() -> GameResult<Question, Answer> {
