@@ -11,115 +11,44 @@ import QuizEngine
 
 class QuizTests: XCTestCase {
     
-    func test_quiz_withQuestionsButNotStarted_doesNotCompleteQuiz() {
+    func test_quiz_withQuestionsButNotStarted_doesNotAsksQuestionsNorCompleteQuiz() {
         let (_, delegate) = makeSUT(questions: ["Q1"])
         
-        XCTAssertTrue(delegate.handledQuestions.isEmpty)
+        XCTAssertTrue(delegate.questionsAsked.isEmpty)
         XCTAssertTrue(delegate.completedQuizzes.isEmpty)
     }
     
-    func test_start_withNoQuestions_completeWithEmptyQuiz() {
+    func test_start_withNoQuestions_doesNotAsksQuestionsButCompleteWithEmptyQuiz() {
         let (quiz, delegate) = makeSUT(questions: [])
         
         quiz.start()
         
+        XCTAssertTrue(delegate.questionsAsked.isEmpty)
         XCTAssertTrue(delegate.completedQuizzes.count == 1) // there is one completed quiz
         XCTAssertTrue(delegate.completedQuizzes[0].isEmpty) // and that quiz is empty
     }
     
-    func test_start_withNoQuestions_doesNotDelegateQuestionsHandling() {
-        let (quiz, delegate) = makeSUT(questions: [])
-        
-        quiz.start()
-        
-        XCTAssertTrue(delegate.handledQuestions.isEmpty)
-    }
-    
-    func test_start_withOneQuestion_delegatesQuestionForHandling() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1"])
-        
-        quiz.start()
-        
-        XCTAssertEqual(delegate.handledQuestions, ["Q1"])
-    }
-    
-    func test_start_withOneQuestion_delegatesAnotherQuestionForHandling() {
-        let (quiz, delegate) = makeSUT(questions: ["Q2"])
-        
-        quiz.start()
-        
-        XCTAssertEqual(delegate.handledQuestions, ["Q2"])
-    }
-    
-    func test_start_withTwoQuestions_delegatesFirstQuestionHandling() {
+    func test_startAndAnswerFirstAndSecondQuestions_withTwoQuestions_askForTwoQuestionsAndCompleteQuiz() {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         quiz.start()
+        delegate.answerCompletion("A1")
+        delegate.answerCompletion("A2")
         
-        XCTAssertEqual(delegate.handledQuestions, ["Q1"])
+        XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2"])
+        XCTAssertEqual(delegate.completedQuizzes.count, 1)
+        assertEqual(delegate.completedQuizzes[0], [("Q1", "A1"), ("Q2", "A2")])
     }
     
-    func test_start_withTwoQuestionsTwice_delegatesFirstQuestionHandlingTwice() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
-        
-        quiz.start()
-        quiz.start()
-        
-        XCTAssertEqual(delegate.handledQuestions, ["Q1", "Q1"])
-    }
-    
-    func test_startAndAnswerFirstAndSecondQuestion_withThreeQuestions_delegatesAllQuestionsForHandling() {
+    func test_startAndAnswerFirstAndSecondQuestion_withThreeQuestions_askForAllQuestionsButDoesNotCompleteQuiz() {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
         
         quiz.start()
         delegate.answerCompletion("A1")
         delegate.answerCompletion("A2")
         
-        XCTAssertEqual(delegate.handledQuestions, ["Q1", "Q2", "Q3"])
-    }
-    
-    func test_startAndAnswerFirstQuestion_withOneQuestions_doesDelegatesMoreQuestions() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1"])
-        
-        quiz.start()
-        delegate.answerCompletion("A1")
-        
-        XCTAssertEqual(delegate.handledQuestions, ["Q1"])
-    }
-    
-    func test_start_withNoQuestions_delegatesResultHandling() {
-        let (quiz, delegate) = makeSUT(questions: [])
-        
-        quiz.start()
-        
-        XCTAssertEqual(delegate.handledResult!.answers, [:])
-    }
-    
-    func test_startWithNoAnswer_withOneQuestions_doesNotDelegatesResultHandling() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1"])
-        
-        quiz.start()
-        
-        XCTAssertNil(delegate.handledResult)
-    }
-    
-    func test_startAndAnswerFirstQuestion_withTwoQuestions_doesNotDelegatesResultHandling() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
-        
-        quiz.start()
-        delegate.answerCompletion("A1")
-        
-        XCTAssertNil(delegate.handledResult)
-    }
-    
-    func test_startAndAnswerFirstAndSecondQuestions_withTwoQuestions_delegatesResultHandling() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
-        
-        quiz.start()
-        delegate.answerCompletion("A1")
-        delegate.answerCompletion("A2")
-        
-        XCTAssertEqual(delegate.handledResult!.answers, ["Q1": "A1", "Q2": "A2"])
+        XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2", "Q3"])
+        XCTAssertTrue(delegate.completedQuizzes.isEmpty)
     }
 
     func test_start_answerZeroOutOfTwoCorrectly_scoresZero() {
@@ -166,6 +95,20 @@ class QuizTests: XCTestCase {
             correctAnswers: correctAnswers
         )
         return (quiz, delegate)
+    }
+    
+    private func assertEqual(
+        _ a1: [(String, String)],
+        _ a2: [(String, String)],
+        file: StaticString = #file,
+        line: UInt = #line
+    ) {
+        XCTAssertTrue(
+            a1.elementsEqual(a2, by: ==),
+            "\(a1) is not equal to \(a2)",
+            file: file,
+            line: line
+        )
     }
 
 }

@@ -10,13 +10,13 @@ import QuizEngine
 
 class DelegateSpy: QuizDelegate {
     
-    var handledQuestions: [String] = []
+    var questionsAsked: [String] = []
     var handledResult: GameResult<String, String>? = nil
     var completedQuizzes: [[(String, String)]] = []
     var answerCompletion: (String) -> Void = { _ in }
     
     func answer(for question: String, completion: @escaping (String) -> Void) {
-        handledQuestions.append(question)
+        questionsAsked.append(question)
         self.answerCompletion = completion
     }
     
