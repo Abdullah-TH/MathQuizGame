@@ -20,6 +20,10 @@ class DelegateSpy: QuizDelegate {
         self.answerCompletion = completion
     }
     
+    func didCompleteQuiz(with answers: [(question: String, answer: String)]) {
+        completedQuizzes.append(answers)
+    }
+    
     func handle(result: GameResult<String, String>) {
         handledResult = result
     }

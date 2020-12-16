@@ -18,6 +18,15 @@ class QuizTests: XCTestCase {
         XCTAssertTrue(delegate.completedQuizzes.isEmpty)
     }
     
+    func test_start_withNoQuestions_completeWithEmptyQuiz() {
+        let (quiz, delegate) = makeSUT(questions: [])
+        
+        quiz.start()
+        
+        XCTAssertTrue(delegate.completedQuizzes.count == 1) // there is one completed quiz
+        XCTAssertTrue(delegate.completedQuizzes[0].isEmpty) // and that quiz is empty
+    }
+    
     func test_start_withNoQuestions_doesNotDelegateQuestionsHandling() {
         let (quiz, delegate) = makeSUT(questions: [])
         

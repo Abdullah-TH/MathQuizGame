@@ -33,6 +33,7 @@ final class Flow<Question, Answer, Delegate: QuizDelegate> where Delegate.Questi
             let question = questions[index]
             delegate.answer(for: question, completion: answer(for: question, at: index))
         } else {
+            delegate.didCompleteQuiz(with: [])
             delegate.handle(result: gameResult())
         }
     }
