@@ -63,8 +63,8 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
         
         quiz.start()
-        delegate.answerCallback("A1")
-        delegate.answerCallback("A2")
+        delegate.answerCompletion("A1")
+        delegate.answerCompletion("A2")
         
         XCTAssertEqual(delegate.handledQuestions, ["Q1", "Q2", "Q3"])
     }
@@ -73,7 +73,7 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1"])
         
         quiz.start()
-        delegate.answerCallback("A1")
+        delegate.answerCompletion("A1")
         
         XCTAssertEqual(delegate.handledQuestions, ["Q1"])
     }
@@ -98,7 +98,7 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         quiz.start()
-        delegate.answerCallback("A1")
+        delegate.answerCompletion("A1")
         
         XCTAssertNil(delegate.handledResult)
     }
@@ -107,8 +107,8 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         quiz.start()
-        delegate.answerCallback("A1")
-        delegate.answerCallback("A2")
+        delegate.answerCompletion("A1")
+        delegate.answerCompletion("A2")
         
         XCTAssertEqual(delegate.handledResult!.answers, ["Q1": "A1", "Q2": "A2"])
     }
@@ -117,8 +117,8 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
         
         quiz.start()
-        delegate.answerCallback("wrong")
-        delegate.answerCallback("wrong")
+        delegate.answerCompletion("wrong")
+        delegate.answerCompletion("wrong")
         
         XCTAssertEqual(delegate.handledResult!.score, 0)
     }
@@ -127,8 +127,8 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
         
         quiz.start()
-        delegate.answerCallback("A1")
-        delegate.answerCallback("wrong")
+        delegate.answerCompletion("A1")
+        delegate.answerCompletion("wrong")
 
         XCTAssertEqual(delegate.handledResult!.score, 1)
     }
@@ -137,8 +137,8 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
         
         quiz.start()
-        delegate.answerCallback("A1")
-        delegate.answerCallback("A2")
+        delegate.answerCompletion("A1")
+        delegate.answerCompletion("A2")
 
         XCTAssertEqual(delegate.handledResult!.score, 2)
     }
