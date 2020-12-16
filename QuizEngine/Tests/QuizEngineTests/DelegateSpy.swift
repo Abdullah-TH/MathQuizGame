@@ -12,11 +12,11 @@ class DelegateSpy: QuizDelegate {
     
     var questionsAsked: [String] = []
     var completedQuizzes: [[(String, String)]] = []
-    var answerCompletion: (String) -> Void = { _ in }
+    var answerCompletions: [(String) -> Void] = []
     
     func answer(for question: String, completion: @escaping (String) -> Void) {
         questionsAsked.append(question)
-        self.answerCompletion = completion
+        self.answerCompletions.append(completion)
     }
     
     func didCompleteQuiz(with answers: [(question: String, answer: String)]) {

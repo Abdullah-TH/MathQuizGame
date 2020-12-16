@@ -32,8 +32,8 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
         
         quiz.start()
-        delegate.answerCompletion("A1")
-        delegate.answerCompletion("A2")
+        delegate.answerCompletions[0]("A1")
+        delegate.answerCompletions[1]("A2")
         
         XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2"])
         XCTAssertEqual(delegate.completedQuizzes.count, 1)
@@ -44,11 +44,37 @@ class QuizTests: XCTestCase {
         let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
         
         quiz.start()
-        delegate.answerCompletion("A1")
-        delegate.answerCompletion("A2")
+        delegate.answerCompletions[0]("A1")
+        delegate.answerCompletions[1]("A2")
         
         XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2", "Q3"])
         XCTAssertTrue(delegate.completedQuizzes.isEmpty)
+    }
+    
+    func test_startAndAnswerAllQuestionsTwice_completeTwice() {
+        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
+        
+        quiz.start()
+        delegate.answerCompletions[0]("A1")
+        delegate.answerCompletions[1]("A2")
+        delegate.answerCompletions[0]("A3")
+        delegate.answerCompletions[1]("A4")
+        
+        XCTAssertTrue(delegate.completedQuizzes.count == 2)
+    }
+    
+    func test_startAndAnswerAllQuestionsManyTimes_quizCompleteWheneverAnsweringTheLastQuestion() {
+        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
+        
+        quiz.start()
+        delegate.answerCompletions[0]("A1")
+        delegate.answerCompletions[1]("A2")
+        delegate.answerCompletions[2]("A3")   // 1
+        delegate.answerCompletions[2]("A3-2") // 2
+        delegate.answerCompletions[2]("A3-3") // 3
+        delegate.answerCompletions[2]("A3-4") // 4
+        
+        XCTAssertTrue(delegate.completedQuizzes.count == 4)
     }
     
     // MARK: - Helpers
