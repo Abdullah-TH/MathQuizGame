@@ -50,36 +50,6 @@ class QuizTests: XCTestCase {
         XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2", "Q3"])
         XCTAssertTrue(delegate.completedQuizzes.isEmpty)
     }
-
-    func test_start_answerZeroOutOfTwoCorrectly_scoresZero() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
-        
-        quiz.start()
-        delegate.answerCompletion("wrong")
-        delegate.answerCompletion("wrong")
-        
-        XCTAssertEqual(delegate.handledResult!.score, 0)
-    }
-
-    func test_start_answerOneOutOfTwoCorrectly_scoresOne() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
-        
-        quiz.start()
-        delegate.answerCompletion("A1")
-        delegate.answerCompletion("wrong")
-
-        XCTAssertEqual(delegate.handledResult!.score, 1)
-    }
-
-    func test_start_answerTwoOutOfTwoCorrectly_scoresTwo() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"], correctAnswers: ["Q1": "A1", "Q2":"A2"])
-        
-        quiz.start()
-        delegate.answerCompletion("A1")
-        delegate.answerCompletion("A2")
-
-        XCTAssertEqual(delegate.handledResult!.score, 2)
-    }
     
     // MARK: - Helpers
     
