@@ -14,8 +14,12 @@ class BasicScore {
         for answers: [String],
         comparingTo correctAnswers: [String]
     ) -> Int {
-        guard !answers.isEmpty else { return 0 }
-        return answers == correctAnswers ? 1 : 0
+        var score = 0
+        for (index, answer) in answers.enumerated() {
+            let isCorrect = answer == correctAnswers[index]
+            score += isCorrect ? 1 : 0
+        }
+        return score
     }
 }
 
@@ -33,6 +37,11 @@ class ScoreTests: XCTestCase {
     
     func test_oneCorrectAnswer_scoresOne() {
         let score = BasicScore.score(for: ["correct"], comparingTo: ["correct"])
+        XCTAssertEqual(score, 1)
+    }
+    
+    func test_oneCorrectOneWrongAnswers_scoresOne() {
+        let score = BasicScore.score(for: ["correct 1", "wrong"], comparingTo: ["correct 1", "correct 2"])
         XCTAssertEqual(score, 1)
     }
 }
