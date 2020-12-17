@@ -11,10 +11,11 @@ import XCTest
 class BasicScore {
     
     static func score(
-        for answers: [Any],
+        for answers: [String],
         comparingTo correctAnswers: [String]
     ) -> Int {
-        return 0
+        guard !answers.isEmpty else { return 0 }
+        return answers == correctAnswers ? 1 : 0
     }
 }
 
@@ -28,5 +29,10 @@ class ScoreTests: XCTestCase {
     func test_oneWrongAnswer_scoresZero() {
         let score = BasicScore.score(for: ["wrong"], comparingTo: ["correct"])
         XCTAssertEqual(score, 0)
+    }
+    
+    func test_oneCorrectAnswer_scoresOne() {
+        let score = BasicScore.score(for: ["correct"], comparingTo: ["correct"])
+        XCTAssertEqual(score, 1)
     }
 }
