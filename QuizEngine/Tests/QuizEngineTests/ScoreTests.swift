@@ -16,6 +16,7 @@ class BasicScore {
     ) -> Int {
         var score = 0
         for (index, answer) in answers.enumerated() {
+            guard index < correctAnswers.count else { return score }
             let isCorrect = answer == correctAnswers[index]
             score += isCorrect ? 1 : 0
         }
@@ -47,6 +48,16 @@ class ScoreTests: XCTestCase {
     
     func test_twoCorrectAnswers_scoresTwo() {
         let score = BasicScore.score(for: ["correct 1", "correct 2"], comparingTo: ["correct 1", "correct 2"])
+        XCTAssertEqual(score, 2)
+    }
+    
+    func test_withUnequalSizedDataWithTwoManyAnswers_twoCorrectAnswers_scoresTwo() {
+        let score = BasicScore.score(for: ["correct 1", "correct 2", "extra answer"], comparingTo: ["correct 1", "correct 2"])
+        XCTAssertEqual(score, 2)
+    }
+    
+    func test_withUnequalSizedDataWithTwoManyCorrectAnswers_twoCorrectAnswers_scoresTwo() {
+        let score = BasicScore.score(for: ["correct 1", "correct 2"], comparingTo: ["correct 1", "correct 2", "correct 3"])
         XCTAssertEqual(score, 2)
     }
 }
