@@ -44,4 +44,9 @@ class ScoreTests: XCTestCase {
         let score = BasicScore.score(for: ["correct 1", "wrong"], comparingTo: ["correct 1", "correct 2"])
         XCTAssertEqual(score, 1)
     }
+    
+    func test_twoCorrectAnswers_scoresTwo() {
+        let score = BasicScore.score(for: ["correct 1", "correct 2"], comparingTo: ["correct 1", "correct 2"])
+        XCTAssertEqual(score, 2)
+    }
 }
