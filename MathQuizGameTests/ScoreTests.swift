@@ -8,22 +8,6 @@
 import Foundation
 import XCTest
 
-class BasicScore {
-    
-    static func score(
-        for answers: [String],
-        comparingTo correctAnswers: [String]
-    ) -> Int {
-        var score = 0
-        for (index, answer) in answers.enumerated() {
-            guard index < correctAnswers.count else { return score }
-            let isCorrect = answer == correctAnswers[index]
-            score += isCorrect ? 1 : 0
-        }
-        return score
-    }
-}
-
 class ScoreTests: XCTestCase {
     
     func test_noAnswers_scoresZero() {
