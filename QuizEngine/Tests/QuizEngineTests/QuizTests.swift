@@ -12,69 +12,69 @@ import QuizEngine
 class QuizTests: XCTestCase {
     
     func test_quiz_withQuestionsButNotStarted_doesNotAsksQuestionsNorCompleteQuiz() {
-        let (_, delegate) = makeSUT(questions: ["Q1"])
+        let (_, spy) = makeSUT(questions: ["Q1"])
         
-        XCTAssertTrue(delegate.questionsAsked.isEmpty)
-        XCTAssertTrue(delegate.completedQuizzes.isEmpty)
+        XCTAssertTrue(spy.questionsAsked.isEmpty)
+        XCTAssertTrue(spy.completedQuizzes.isEmpty)
     }
     
     func test_start_withNoQuestions_doesNotAsksQuestionsButCompleteWithEmptyQuiz() {
-        let (quiz, delegate) = makeSUT(questions: [])
+        let (quiz, spy) = makeSUT(questions: [])
         
         quiz.start()
         
-        XCTAssertTrue(delegate.questionsAsked.isEmpty)
-        XCTAssertTrue(delegate.completedQuizzes.count == 1) // there is one completed quiz
-        XCTAssertTrue(delegate.completedQuizzes[0].isEmpty) // and that quiz is empty
+        XCTAssertTrue(spy.questionsAsked.isEmpty)
+        XCTAssertTrue(spy.completedQuizzes.count == 1) // there is one completed quiz
+        XCTAssertTrue(spy.completedQuizzes[0].isEmpty) // and that quiz is empty
     }
     
     func test_startAndAnswerFirstAndSecondQuestions_withTwoQuestions_askForTwoQuestionsAndCompleteQuiz() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
+        let (quiz, spy) = makeSUT(questions: ["Q1", "Q2"])
         
         quiz.start()
-        delegate.answerCompletions[0]("A1")
-        delegate.answerCompletions[1]("A2")
+        spy.answerCompletions[0]("A1")
+        spy.answerCompletions[1]("A2")
         
-        XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2"])
-        XCTAssertEqual(delegate.completedQuizzes.count, 1)
-        assertEqual(delegate.completedQuizzes[0], [("Q1", "A1"), ("Q2", "A2")])
+        XCTAssertEqual(spy.questionsAsked, ["Q1", "Q2"])
+        XCTAssertEqual(spy.completedQuizzes.count, 1)
+        assertEqual(spy.completedQuizzes[0], [("Q1", "A1"), ("Q2", "A2")])
     }
     
     func test_startAndAnswerFirstAndSecondQuestion_withThreeQuestions_askForAllQuestionsButDoesNotCompleteQuiz() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
+        let (quiz, spy) = makeSUT(questions: ["Q1", "Q2", "Q3"])
         
         quiz.start()
-        delegate.answerCompletions[0]("A1")
-        delegate.answerCompletions[1]("A2")
+        spy.answerCompletions[0]("A1")
+        spy.answerCompletions[1]("A2")
         
-        XCTAssertEqual(delegate.questionsAsked, ["Q1", "Q2", "Q3"])
-        XCTAssertTrue(delegate.completedQuizzes.isEmpty)
+        XCTAssertEqual(spy.questionsAsked, ["Q1", "Q2", "Q3"])
+        XCTAssertTrue(spy.completedQuizzes.isEmpty)
     }
     
     func test_startAndAnswerAllQuestionsTwice_completeTwice() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2"])
+        let (quiz, spy) = makeSUT(questions: ["Q1", "Q2"])
         
         quiz.start()
-        delegate.answerCompletions[0]("A1")
-        delegate.answerCompletions[1]("A2")
-        delegate.answerCompletions[0]("A3")
-        delegate.answerCompletions[1]("A4")
+        spy.answerCompletions[0]("A1")
+        spy.answerCompletions[1]("A2")
+        spy.answerCompletions[0]("A3")
+        spy.answerCompletions[1]("A4")
         
-        XCTAssertTrue(delegate.completedQuizzes.count == 2)
+        XCTAssertTrue(spy.completedQuizzes.count == 2)
     }
     
     func test_startAndAnswerAllQuestionsManyTimes_quizCompleteWheneverAnsweringTheLastQuestion() {
-        let (quiz, delegate) = makeSUT(questions: ["Q1", "Q2", "Q3"])
+        let (quiz, spy) = makeSUT(questions: ["Q1", "Q2", "Q3"])
         
         quiz.start()
-        delegate.answerCompletions[0]("A1")
-        delegate.answerCompletions[1]("A2")
-        delegate.answerCompletions[2]("A3")   // 1
-        delegate.answerCompletions[2]("A3-2") // 2
-        delegate.answerCompletions[2]("A3-3") // 3
-        delegate.answerCompletions[2]("A3-4") // 4
+        spy.answerCompletions[0]("A1")
+        spy.answerCompletions[1]("A2")
+        spy.answerCompletions[2]("A3")   // 1
+        spy.answerCompletions[2]("A3-2") // 2
+        spy.answerCompletions[2]("A3-3") // 3
+        spy.answerCompletions[2]("A3-4") // 4
         
-        XCTAssertTrue(delegate.completedQuizzes.count == 4)
+        XCTAssertTrue(spy.completedQuizzes.count == 4)
     }
     
     // MARK: - Helpers
@@ -82,11 +82,11 @@ class QuizTests: XCTestCase {
     private func makeSUT(
         questions: [String],
         correctAnswers: [String: String] = [:]
-    ) -> (Quiz<DelegateSpy>, DelegateSpy) {
+    ) -> (Quiz<QuizSpy, QuizSpy>, QuizSpy) {
         
-        let delegate = DelegateSpy()
-        let quiz = Quiz(questions: questions, delegate: delegate)
-        return (quiz, delegate)
+        let spy = QuizSpy()
+        let quiz = Quiz(questions: questions, dataSource: spy, delegate: spy)
+        return (quiz, spy)
     }
     
     private func assertEqual(
